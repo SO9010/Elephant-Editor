@@ -6,20 +6,17 @@ window *wind = NULL;
 int main(){
     wind = new window();
     wind->init();
+    board grid;
 
-    int boardX, boardY, cellSize, dispalceX, displaceY;
-    
-    boardX = 8;
-    boardY = 8;
-    cellSize = 64;
+    grid.bP.boardX = 8;
+    grid.bP.boardY = 8;
+    grid.bP.cellSize = 64;
 
-    bool mouseHover = false;
-    bool mouseActive = false;
 
     while(wind->windowProperties().running){
-        wind->handleWindowEvent(boardX, boardY, cellSize, dispalceX, displaceY); 
+        wind->handleWindowEvent(grid.bP.boardX, grid.bP.boardY, grid.bP.cellSize, grid.bP.dispalceX, grid.bP.displaceY); 
         
-        drawGrid(boardX, boardY, cellSize, wind->windowProperties().w, wind->windowProperties().h, dispalceX, displaceY);
+        grid.drawGrid(wind->windowProperties().w, wind->windowProperties().h, grid.bP.dispalceX, grid.bP.displaceY);
         
         wind->update();
         wind->render();

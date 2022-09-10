@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lstdc++ CMakeFiles/pix.dir/src/board.o CMakeFiles/pix.dir/src/main.o CMakeFiles/pix.dir/src/window.o -o pix 

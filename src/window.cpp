@@ -1,4 +1,5 @@
 #include "window.h"
+#include "board.h"
 
 SDL_Renderer* window::rend = nullptr;
 
@@ -27,9 +28,7 @@ void window::init(){
 }
 
 void window::handleWindowEvent(int &boardX, int &boardY, int &cellSize, int &dispalceX, int &displaceY){
-    SDL_Event event;
     const Uint8 *state = SDL_GetKeyboardState(NULL);
-
     if(SDL_WaitEvent(&event)){
         switch(event.type){
             case SDL_QUIT:
@@ -48,20 +47,7 @@ void window::handleWindowEvent(int &boardX, int &boardY, int &cellSize, int &dis
                         boardY -= 1;
                     }
                 } 
-                /*  KeyBoardMove
-                if(state[SDL_SCANCODE_W]){
-                    displaceY -= 5;
-                }                
-                if(state[SDL_SCANCODE_S]){
-                    displaceY += 5;
-                }    
-                if(state[SDL_SCANCODE_A]){
-                    dispalceX -= 5;
-                }                
-                if(state[SDL_SCANCODE_D]){
-                    dispalceX += 5;
-                }
-                */
+
             break;
 
             case SDL_MOUSEWHEEL:
@@ -101,9 +87,7 @@ void window::handleWindowEvent(int &boardX, int &boardY, int &cellSize, int &dis
             break; 
         case SDL_MOUSEBUTTONUP:
                 int cx, cy;
-
-                        SDL_GetMouseState(&cx, &cy);
-                std::cout << cx << "|||" << cy << std::endl;
+                SDL_GetMouseState(&cx, &cy);
             first = true;
         break;
         }

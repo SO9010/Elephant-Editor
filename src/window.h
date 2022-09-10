@@ -13,6 +13,7 @@ struct windowProperty{
 class window{
 private: 
     SDL_Window         *wind;
+    SDL_Event event;
     bool                running;
     int gridSizePlus = 0;
     bool first = true;

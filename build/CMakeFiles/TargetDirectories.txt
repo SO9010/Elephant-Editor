@@ -1,0 +1,3 @@
+/home/samio/Pix/build/CMakeFiles/pix.dir
+/home/samio/Pix/build/CMakeFiles/edit_cache.dir
+/home/samio/Pix/build/CMakeFiles/rebuild_cache.dir
