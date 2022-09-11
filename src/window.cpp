@@ -7,41 +7,39 @@ SDL_Renderer* window::rend = nullptr;
 window::window(){
     SDL_Init(SDL_INIT_EVERYTHING);
     IMG_Init(IMG_INIT_PNG);
-    running = true; 
+    wP.running = true; 
 }
 
 window::~window(){
     IMG_Quit();
     SDL_Quit();
-    if(running){
-        running = false;
+    if(wP.running){
+        wP.running = false;
     }
 }
 
 void window::init(){
     SDL_DisplayMode DM;
     SDL_GetCurrentDisplayMode(0, &DM);
-    auto windowWidth = DM.w / 1.5;
-    auto windowHeight = DM.h / 1.5;
+    wP.w = DM.w / 1.5;
+    wP.h = DM.h / 1.5;
     Uint32 flags = SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE;
-    wP.running = running;
-    SDL_CreateWindowAndRenderer(windowWidth, windowHeight, flags, &wind, &rend);
+    SDL_CreateWindowAndRenderer(wP.w, wP.h, flags, &wind, &rend);
 }
 
-void window::updateWP(){
-    SDL_GetWindowSize(wind, &windowWidth, &windowHight);
-    wP.h = windowHight;
-    wP.w = windowWidth;
-    wP.running = running;
+void window::updateWP(boardPorperties bP){
+    SDL_GetWindowSize(wind, &wP.w, &wP.h);
+    wP.cW = (wP.w/2) + bP.displaceX;
+    wP.cH = (wP.h/2) + bP.displaceY;
 }
 
 void window::handleWindowEvent(boardPorperties &bP){
     if(SDL_WaitEvent(&event)){
         const Uint8 *state = SDL_GetKeyboardState(NULL);
-        updateWP();
+        updateWP(bP);
         switch(event.type){
             case SDL_QUIT:
-                running = false;
+                wP.running = false;
             break;
             case SDL_KEYDOWN:
                 if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_P]){
@@ -49,10 +47,10 @@ void window::handleWindowEvent(boardPorperties &bP){
                     bP.board.y += 1;
                 }
                 if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_M]){
-                    if(bP.board.x > 4){
+                    if(bP.board.x > 3){
                         bP.board.x -= 1;
                     }
-                    if(bP.board.y > 4){
+                    if(bP.board.y > 3){
                         bP.board.y -= 1;
                     }
                 }               
@@ -85,10 +83,7 @@ void window::handleWindowEvent(boardPorperties &bP){
                         dX = -(oX - xF);
                         dy = -(oY - yF);
                         
-                        tmpX = dX;
-                        tmpY = dy;
-
-                        bP.dispalceX = dX + bP.fDisplaceX;
+                        bP.displaceX = dX + bP.fDisplaceX;
                         bP.displaceY = dy + bP.fDisplaceY;
                     }
                 }
@@ -105,12 +100,13 @@ void window::handleWindowEvent(boardPorperties &bP){
 
         case SDL_MOUSEBUTTONUP:
                 first = true;
-                bP.fDisplaceX = bP.dispalceX;
+                bP.fDisplaceX = bP.displaceX;
                 bP.fDisplaceY = bP.displaceY;
-                std::cout << bP.fDisplaceX << " || " << bP.fDisplaceY << std::endl;
         break;
         }
     }
+        this->update();
+        this->render();
 }
 
 void window::render(){
