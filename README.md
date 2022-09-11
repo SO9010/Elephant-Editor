@@ -9,12 +9,11 @@ This is a 2d pixel art editor/creator created using the SDL2 library.
 ---
 #### Roadmap
 
-- [ ] Tool bar UI creation
+- [x] Fix canvas movement
 - [ ] Canvas draw implementation
-- [ ] Draw tool
+- [ ] Tool bar UI creation
 - [ ] Export canvas (bitmap)
 - [ ] Open photo (bitmap)
-- [ ] Fix canvas movement
 
 #### Compiling details
 
