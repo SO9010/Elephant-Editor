@@ -14,7 +14,15 @@ This is a 2d pixel art editor/creator created using the SDL2 library.
 - [ ] Draw tool
 - [ ] Export canvas (bitmap)
 - [ ] Open photo (bitmap)
+- [ ] Fix canvas movement
 
 #### Compiling details
 
     All you need to do is go into the build dir and then type make then to run it do "./pix".
+
+#### Current ways to work
+
+* Press "ctrl p" to add more cells evenly to every side
+* Press "ctrl m" to remove cells evenly to every side untill only 1 or 4 is left 
+* Press down the scroll button to move the canvas
+* Scroll to zoom in/out

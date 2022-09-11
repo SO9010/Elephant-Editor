@@ -1,30 +1,36 @@
 #pragma once
 
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
+#include "../includes/SDL.h"
+#include "../includes/SDL_image.h"
 #include <iostream>
 
-struct windowProperty{
-    int w, h;
-    bool running;
-    SDL_Renderer *rend;
-};
+#include "properties.h"
 
 class window{
-private: 
-    SDL_Window         *wind;
-    SDL_Event event;
-    bool                running;
-    int gridSizePlus = 0;
-    bool first = true;
-    int oX, oY, yF, xF;
 public:
     window();
     ~window();
-    windowProperty      windowProperties();
+
+    windowProperty  wP;
+
     static SDL_Renderer *rend;
     void                init();
-    void                handleWindowEvent(int &boardX, int &boardY, int &cellSize, int &dispalceX, int &displaceY);
+    void                handleWindowEvent(boardPorperties &bP);
     void                render();
     void                update();
+private: 
+    SDL_Window          *wind;
+    SDL_Event           event;
+    bool                running;
+    bool                first = true;
+    int                 oX, oY,                     //original X/Y position (of cursor)
+                            yF, xF;                 //Y/X final position (of cursor)
+    int                 windowWidth, windowHight;
+    int                 centerWidth, centerHight;
+    int                 tmpX = 0, tmpY = 0;
+
+                int differencex = 0;
+                int differencey = 0;
+    void updateWP();
+
 };

@@ -5,13 +5,13 @@ CMakeFiles/pix.dir/src/board.o: /home/samio/Pix/src/board.cpp \
   /usr/include/stdc-predef.h \
   /home/samio/Pix/src/board.h \
   /home/samio/Pix/src/window.h \
-  /usr/include/SDL2/SDL.h \
-  /usr/include/SDL2/SDL_main.h \
-  /usr/include/SDL2/SDL_stdinc.h \
-  /usr/include/SDL2/SDL_config.h \
-  /usr/include/SDL2/SDL_platform.h \
-  /usr/include/SDL2/begin_code.h \
-  /usr/include/SDL2/close_code.h \
+  /home/samio/Pix/includes/SDL.h \
+  /home/samio/Pix/includes/SDL_main.h \
+  /home/samio/Pix/includes/SDL_stdinc.h \
+  /home/samio/Pix/includes/SDL_config.h \
+  /home/samio/Pix/includes/SDL_platform.h \
+  /home/samio/Pix/includes/begin_code.h \
+  /home/samio/Pix/includes/close_code.h \
   /usr/include/sys/types.h \
   /usr/include/features.h \
   /usr/include/features-time64.h \
@@ -130,16 +130,16 @@ CMakeFiles/pix.dir/src/board.o: /home/samio/Pix/src/board.cpp \
   /usr/include/c++/12.2.0/tr1/poly_laguerre.tcc \
   /usr/include/c++/12.2.0/tr1/riemann_zeta.tcc \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/float.h \
-  /usr/include/SDL2/SDL_assert.h \
-  /usr/include/SDL2/SDL_atomic.h \
-  /usr/include/SDL2/SDL_audio.h \
-  /usr/include/SDL2/SDL_error.h \
-  /usr/include/SDL2/SDL_endian.h \
-  /usr/include/SDL2/SDL_mutex.h \
-  /usr/include/SDL2/SDL_thread.h \
-  /usr/include/SDL2/SDL_rwops.h \
-  /usr/include/SDL2/SDL_clipboard.h \
-  /usr/include/SDL2/SDL_cpuinfo.h \
+  /home/samio/Pix/includes/SDL_assert.h \
+  /home/samio/Pix/includes/SDL_atomic.h \
+  /home/samio/Pix/includes/SDL_audio.h \
+  /home/samio/Pix/includes/SDL_error.h \
+  /home/samio/Pix/includes/SDL_endian.h \
+  /home/samio/Pix/includes/SDL_mutex.h \
+  /home/samio/Pix/includes/SDL_thread.h \
+  /home/samio/Pix/includes/SDL_rwops.h \
+  /home/samio/Pix/includes/SDL_clipboard.h \
+  /home/samio/Pix/includes/SDL_cpuinfo.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/immintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/x86gprintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/ia32intrin.h \
@@ -226,41 +226,41 @@ CMakeFiles/pix.dir/src/board.o: /home/samio/Pix/src/board.cpp \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/amxbf16intrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/prfchwintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/keylockerintrin.h \
-  /usr/include/SDL2/SDL_events.h \
-  /usr/include/SDL2/SDL_video.h \
-  /usr/include/SDL2/SDL_pixels.h \
-  /usr/include/SDL2/SDL_rect.h \
-  /usr/include/SDL2/SDL_surface.h \
-  /usr/include/SDL2/SDL_blendmode.h \
-  /usr/include/SDL2/SDL_keyboard.h \
-  /usr/include/SDL2/SDL_keycode.h \
-  /usr/include/SDL2/SDL_scancode.h \
-  /usr/include/SDL2/SDL_mouse.h \
-  /usr/include/SDL2/SDL_joystick.h \
-  /usr/include/SDL2/SDL_guid.h \
-  /usr/include/SDL2/SDL_gamecontroller.h \
-  /usr/include/SDL2/SDL_sensor.h \
-  /usr/include/SDL2/SDL_quit.h \
-  /usr/include/SDL2/SDL_gesture.h \
-  /usr/include/SDL2/SDL_touch.h \
-  /usr/include/SDL2/SDL_filesystem.h \
-  /usr/include/SDL2/SDL_haptic.h \
-  /usr/include/SDL2/SDL_hidapi.h \
-  /usr/include/SDL2/SDL_hints.h \
-  /usr/include/SDL2/SDL_loadso.h \
-  /usr/include/SDL2/SDL_log.h \
-  /usr/include/SDL2/SDL_messagebox.h \
-  /usr/include/SDL2/SDL_metal.h \
-  /usr/include/SDL2/SDL_power.h \
-  /usr/include/SDL2/SDL_render.h \
-  /usr/include/SDL2/SDL_shape.h \
-  /usr/include/SDL2/SDL_system.h \
-  /usr/include/SDL2/SDL_timer.h \
-  /usr/include/SDL2/SDL_version.h \
-  /usr/include/SDL2/SDL_locale.h \
-  /usr/include/SDL2/SDL_misc.h \
-  /usr/include/SDL2/SDL_image.h \
-  /usr/include/SDL2/SDL.h \
+  /home/samio/Pix/includes/SDL_events.h \
+  /home/samio/Pix/includes/SDL_video.h \
+  /home/samio/Pix/includes/SDL_pixels.h \
+  /home/samio/Pix/includes/SDL_rect.h \
+  /home/samio/Pix/includes/SDL_surface.h \
+  /home/samio/Pix/includes/SDL_blendmode.h \
+  /home/samio/Pix/includes/SDL_keyboard.h \
+  /home/samio/Pix/includes/SDL_keycode.h \
+  /home/samio/Pix/includes/SDL_scancode.h \
+  /home/samio/Pix/includes/SDL_mouse.h \
+  /home/samio/Pix/includes/SDL_joystick.h \
+  /home/samio/Pix/includes/SDL_guid.h \
+  /home/samio/Pix/includes/SDL_gamecontroller.h \
+  /home/samio/Pix/includes/SDL_sensor.h \
+  /home/samio/Pix/includes/SDL_quit.h \
+  /home/samio/Pix/includes/SDL_gesture.h \
+  /home/samio/Pix/includes/SDL_touch.h \
+  /home/samio/Pix/includes/SDL_filesystem.h \
+  /home/samio/Pix/includes/SDL_haptic.h \
+  /home/samio/Pix/includes/SDL_hidapi.h \
+  /home/samio/Pix/includes/SDL_hints.h \
+  /home/samio/Pix/includes/SDL_loadso.h \
+  /home/samio/Pix/includes/SDL_log.h \
+  /home/samio/Pix/includes/SDL_messagebox.h \
+  /home/samio/Pix/includes/SDL_metal.h \
+  /home/samio/Pix/includes/SDL_power.h \
+  /home/samio/Pix/includes/SDL_render.h \
+  /home/samio/Pix/includes/SDL_shape.h \
+  /home/samio/Pix/includes/SDL_system.h \
+  /home/samio/Pix/includes/SDL_timer.h \
+  /home/samio/Pix/includes/SDL_version.h \
+  /home/samio/Pix/includes/SDL_locale.h \
+  /home/samio/Pix/includes/SDL_misc.h \
+  /home/samio/Pix/includes/SDL_image.h \
+  /home/samio/Pix/includes/SDL.h \
   /usr/include/c++/12.2.0/iostream \
   /usr/include/c++/12.2.0/ostream \
   /usr/include/c++/12.2.0/ios \
@@ -355,6 +355,9 @@ CMakeFiles/pix.dir/src/board.o: /home/samio/Pix/src/board.cpp \
   /usr/include/c++/12.2.0/bits/ostream.tcc \
   /usr/include/c++/12.2.0/istream \
   /usr/include/c++/12.2.0/bits/istream.tcc \
+  /home/samio/Pix/src/properties.h \
+  /usr/include/SDL2/SDL.h \
+  /usr/include/SDL2/SDL_image.h \
   /usr/include/c++/12.2.0/vector \
   /usr/include/c++/12.2.0/bits/stl_uninitialized.h \
   /usr/include/c++/12.2.0/bits/stl_vector.h \
@@ -364,13 +367,13 @@ CMakeFiles/pix.dir/src/board.o: /home/samio/Pix/src/board.cpp \
 CMakeFiles/pix.dir/src/main.o: /home/samio/Pix/src/main.cpp \
   /usr/include/stdc-predef.h \
   /home/samio/Pix/src/window.h \
-  /usr/include/SDL2/SDL.h \
-  /usr/include/SDL2/SDL_main.h \
-  /usr/include/SDL2/SDL_stdinc.h \
-  /usr/include/SDL2/SDL_config.h \
-  /usr/include/SDL2/SDL_platform.h \
-  /usr/include/SDL2/begin_code.h \
-  /usr/include/SDL2/close_code.h \
+  /home/samio/Pix/includes/SDL.h \
+  /home/samio/Pix/includes/SDL_main.h \
+  /home/samio/Pix/includes/SDL_stdinc.h \
+  /home/samio/Pix/includes/SDL_config.h \
+  /home/samio/Pix/includes/SDL_platform.h \
+  /home/samio/Pix/includes/begin_code.h \
+  /home/samio/Pix/includes/close_code.h \
   /usr/include/sys/types.h \
   /usr/include/features.h \
   /usr/include/features-time64.h \
@@ -489,16 +492,16 @@ CMakeFiles/pix.dir/src/main.o: /home/samio/Pix/src/main.cpp \
   /usr/include/c++/12.2.0/tr1/poly_laguerre.tcc \
   /usr/include/c++/12.2.0/tr1/riemann_zeta.tcc \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/float.h \
-  /usr/include/SDL2/SDL_assert.h \
-  /usr/include/SDL2/SDL_atomic.h \
-  /usr/include/SDL2/SDL_audio.h \
-  /usr/include/SDL2/SDL_error.h \
-  /usr/include/SDL2/SDL_endian.h \
-  /usr/include/SDL2/SDL_mutex.h \
-  /usr/include/SDL2/SDL_thread.h \
-  /usr/include/SDL2/SDL_rwops.h \
-  /usr/include/SDL2/SDL_clipboard.h \
-  /usr/include/SDL2/SDL_cpuinfo.h \
+  /home/samio/Pix/includes/SDL_assert.h \
+  /home/samio/Pix/includes/SDL_atomic.h \
+  /home/samio/Pix/includes/SDL_audio.h \
+  /home/samio/Pix/includes/SDL_error.h \
+  /home/samio/Pix/includes/SDL_endian.h \
+  /home/samio/Pix/includes/SDL_mutex.h \
+  /home/samio/Pix/includes/SDL_thread.h \
+  /home/samio/Pix/includes/SDL_rwops.h \
+  /home/samio/Pix/includes/SDL_clipboard.h \
+  /home/samio/Pix/includes/SDL_cpuinfo.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/immintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/x86gprintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/ia32intrin.h \
@@ -585,41 +588,41 @@ CMakeFiles/pix.dir/src/main.o: /home/samio/Pix/src/main.cpp \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/amxbf16intrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/prfchwintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/keylockerintrin.h \
-  /usr/include/SDL2/SDL_events.h \
-  /usr/include/SDL2/SDL_video.h \
-  /usr/include/SDL2/SDL_pixels.h \
-  /usr/include/SDL2/SDL_rect.h \
-  /usr/include/SDL2/SDL_surface.h \
-  /usr/include/SDL2/SDL_blendmode.h \
-  /usr/include/SDL2/SDL_keyboard.h \
-  /usr/include/SDL2/SDL_keycode.h \
-  /usr/include/SDL2/SDL_scancode.h \
-  /usr/include/SDL2/SDL_mouse.h \
-  /usr/include/SDL2/SDL_joystick.h \
-  /usr/include/SDL2/SDL_guid.h \
-  /usr/include/SDL2/SDL_gamecontroller.h \
-  /usr/include/SDL2/SDL_sensor.h \
-  /usr/include/SDL2/SDL_quit.h \
-  /usr/include/SDL2/SDL_gesture.h \
-  /usr/include/SDL2/SDL_touch.h \
-  /usr/include/SDL2/SDL_filesystem.h \
-  /usr/include/SDL2/SDL_haptic.h \
-  /usr/include/SDL2/SDL_hidapi.h \
-  /usr/include/SDL2/SDL_hints.h \
-  /usr/include/SDL2/SDL_loadso.h \
-  /usr/include/SDL2/SDL_log.h \
-  /usr/include/SDL2/SDL_messagebox.h \
-  /usr/include/SDL2/SDL_metal.h \
-  /usr/include/SDL2/SDL_power.h \
-  /usr/include/SDL2/SDL_render.h \
-  /usr/include/SDL2/SDL_shape.h \
-  /usr/include/SDL2/SDL_system.h \
-  /usr/include/SDL2/SDL_timer.h \
-  /usr/include/SDL2/SDL_version.h \
-  /usr/include/SDL2/SDL_locale.h \
-  /usr/include/SDL2/SDL_misc.h \
-  /usr/include/SDL2/SDL_image.h \
-  /usr/include/SDL2/SDL.h \
+  /home/samio/Pix/includes/SDL_events.h \
+  /home/samio/Pix/includes/SDL_video.h \
+  /home/samio/Pix/includes/SDL_pixels.h \
+  /home/samio/Pix/includes/SDL_rect.h \
+  /home/samio/Pix/includes/SDL_surface.h \
+  /home/samio/Pix/includes/SDL_blendmode.h \
+  /home/samio/Pix/includes/SDL_keyboard.h \
+  /home/samio/Pix/includes/SDL_keycode.h \
+  /home/samio/Pix/includes/SDL_scancode.h \
+  /home/samio/Pix/includes/SDL_mouse.h \
+  /home/samio/Pix/includes/SDL_joystick.h \
+  /home/samio/Pix/includes/SDL_guid.h \
+  /home/samio/Pix/includes/SDL_gamecontroller.h \
+  /home/samio/Pix/includes/SDL_sensor.h \
+  /home/samio/Pix/includes/SDL_quit.h \
+  /home/samio/Pix/includes/SDL_gesture.h \
+  /home/samio/Pix/includes/SDL_touch.h \
+  /home/samio/Pix/includes/SDL_filesystem.h \
+  /home/samio/Pix/includes/SDL_haptic.h \
+  /home/samio/Pix/includes/SDL_hidapi.h \
+  /home/samio/Pix/includes/SDL_hints.h \
+  /home/samio/Pix/includes/SDL_loadso.h \
+  /home/samio/Pix/includes/SDL_log.h \
+  /home/samio/Pix/includes/SDL_messagebox.h \
+  /home/samio/Pix/includes/SDL_metal.h \
+  /home/samio/Pix/includes/SDL_power.h \
+  /home/samio/Pix/includes/SDL_render.h \
+  /home/samio/Pix/includes/SDL_shape.h \
+  /home/samio/Pix/includes/SDL_system.h \
+  /home/samio/Pix/includes/SDL_timer.h \
+  /home/samio/Pix/includes/SDL_version.h \
+  /home/samio/Pix/includes/SDL_locale.h \
+  /home/samio/Pix/includes/SDL_misc.h \
+  /home/samio/Pix/includes/SDL_image.h \
+  /home/samio/Pix/includes/SDL.h \
   /usr/include/c++/12.2.0/iostream \
   /usr/include/c++/12.2.0/ostream \
   /usr/include/c++/12.2.0/ios \
@@ -714,6 +717,9 @@ CMakeFiles/pix.dir/src/main.o: /home/samio/Pix/src/main.cpp \
   /usr/include/c++/12.2.0/bits/ostream.tcc \
   /usr/include/c++/12.2.0/istream \
   /usr/include/c++/12.2.0/bits/istream.tcc \
+  /home/samio/Pix/src/properties.h \
+  /usr/include/SDL2/SDL.h \
+  /usr/include/SDL2/SDL_image.h \
   /home/samio/Pix/src/board.h \
   /usr/include/c++/12.2.0/vector \
   /usr/include/c++/12.2.0/bits/stl_uninitialized.h \
@@ -724,13 +730,13 @@ CMakeFiles/pix.dir/src/main.o: /home/samio/Pix/src/main.cpp \
 CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
   /usr/include/stdc-predef.h \
   /home/samio/Pix/src/window.h \
-  /usr/include/SDL2/SDL.h \
-  /usr/include/SDL2/SDL_main.h \
-  /usr/include/SDL2/SDL_stdinc.h \
-  /usr/include/SDL2/SDL_config.h \
-  /usr/include/SDL2/SDL_platform.h \
-  /usr/include/SDL2/begin_code.h \
-  /usr/include/SDL2/close_code.h \
+  /home/samio/Pix/includes/SDL.h \
+  /home/samio/Pix/includes/SDL_main.h \
+  /home/samio/Pix/includes/SDL_stdinc.h \
+  /home/samio/Pix/includes/SDL_config.h \
+  /home/samio/Pix/includes/SDL_platform.h \
+  /home/samio/Pix/includes/begin_code.h \
+  /home/samio/Pix/includes/close_code.h \
   /usr/include/sys/types.h \
   /usr/include/features.h \
   /usr/include/features-time64.h \
@@ -849,16 +855,16 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
   /usr/include/c++/12.2.0/tr1/poly_laguerre.tcc \
   /usr/include/c++/12.2.0/tr1/riemann_zeta.tcc \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/float.h \
-  /usr/include/SDL2/SDL_assert.h \
-  /usr/include/SDL2/SDL_atomic.h \
-  /usr/include/SDL2/SDL_audio.h \
-  /usr/include/SDL2/SDL_error.h \
-  /usr/include/SDL2/SDL_endian.h \
-  /usr/include/SDL2/SDL_mutex.h \
-  /usr/include/SDL2/SDL_thread.h \
-  /usr/include/SDL2/SDL_rwops.h \
-  /usr/include/SDL2/SDL_clipboard.h \
-  /usr/include/SDL2/SDL_cpuinfo.h \
+  /home/samio/Pix/includes/SDL_assert.h \
+  /home/samio/Pix/includes/SDL_atomic.h \
+  /home/samio/Pix/includes/SDL_audio.h \
+  /home/samio/Pix/includes/SDL_error.h \
+  /home/samio/Pix/includes/SDL_endian.h \
+  /home/samio/Pix/includes/SDL_mutex.h \
+  /home/samio/Pix/includes/SDL_thread.h \
+  /home/samio/Pix/includes/SDL_rwops.h \
+  /home/samio/Pix/includes/SDL_clipboard.h \
+  /home/samio/Pix/includes/SDL_cpuinfo.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/immintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/x86gprintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/ia32intrin.h \
@@ -945,41 +951,41 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/amxbf16intrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/prfchwintrin.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/keylockerintrin.h \
-  /usr/include/SDL2/SDL_events.h \
-  /usr/include/SDL2/SDL_video.h \
-  /usr/include/SDL2/SDL_pixels.h \
-  /usr/include/SDL2/SDL_rect.h \
-  /usr/include/SDL2/SDL_surface.h \
-  /usr/include/SDL2/SDL_blendmode.h \
-  /usr/include/SDL2/SDL_keyboard.h \
-  /usr/include/SDL2/SDL_keycode.h \
-  /usr/include/SDL2/SDL_scancode.h \
-  /usr/include/SDL2/SDL_mouse.h \
-  /usr/include/SDL2/SDL_joystick.h \
-  /usr/include/SDL2/SDL_guid.h \
-  /usr/include/SDL2/SDL_gamecontroller.h \
-  /usr/include/SDL2/SDL_sensor.h \
-  /usr/include/SDL2/SDL_quit.h \
-  /usr/include/SDL2/SDL_gesture.h \
-  /usr/include/SDL2/SDL_touch.h \
-  /usr/include/SDL2/SDL_filesystem.h \
-  /usr/include/SDL2/SDL_haptic.h \
-  /usr/include/SDL2/SDL_hidapi.h \
-  /usr/include/SDL2/SDL_hints.h \
-  /usr/include/SDL2/SDL_loadso.h \
-  /usr/include/SDL2/SDL_log.h \
-  /usr/include/SDL2/SDL_messagebox.h \
-  /usr/include/SDL2/SDL_metal.h \
-  /usr/include/SDL2/SDL_power.h \
-  /usr/include/SDL2/SDL_render.h \
-  /usr/include/SDL2/SDL_shape.h \
-  /usr/include/SDL2/SDL_system.h \
-  /usr/include/SDL2/SDL_timer.h \
-  /usr/include/SDL2/SDL_version.h \
-  /usr/include/SDL2/SDL_locale.h \
-  /usr/include/SDL2/SDL_misc.h \
-  /usr/include/SDL2/SDL_image.h \
-  /usr/include/SDL2/SDL.h \
+  /home/samio/Pix/includes/SDL_events.h \
+  /home/samio/Pix/includes/SDL_video.h \
+  /home/samio/Pix/includes/SDL_pixels.h \
+  /home/samio/Pix/includes/SDL_rect.h \
+  /home/samio/Pix/includes/SDL_surface.h \
+  /home/samio/Pix/includes/SDL_blendmode.h \
+  /home/samio/Pix/includes/SDL_keyboard.h \
+  /home/samio/Pix/includes/SDL_keycode.h \
+  /home/samio/Pix/includes/SDL_scancode.h \
+  /home/samio/Pix/includes/SDL_mouse.h \
+  /home/samio/Pix/includes/SDL_joystick.h \
+  /home/samio/Pix/includes/SDL_guid.h \
+  /home/samio/Pix/includes/SDL_gamecontroller.h \
+  /home/samio/Pix/includes/SDL_sensor.h \
+  /home/samio/Pix/includes/SDL_quit.h \
+  /home/samio/Pix/includes/SDL_gesture.h \
+  /home/samio/Pix/includes/SDL_touch.h \
+  /home/samio/Pix/includes/SDL_filesystem.h \
+  /home/samio/Pix/includes/SDL_haptic.h \
+  /home/samio/Pix/includes/SDL_hidapi.h \
+  /home/samio/Pix/includes/SDL_hints.h \
+  /home/samio/Pix/includes/SDL_loadso.h \
+  /home/samio/Pix/includes/SDL_log.h \
+  /home/samio/Pix/includes/SDL_messagebox.h \
+  /home/samio/Pix/includes/SDL_metal.h \
+  /home/samio/Pix/includes/SDL_power.h \
+  /home/samio/Pix/includes/SDL_render.h \
+  /home/samio/Pix/includes/SDL_shape.h \
+  /home/samio/Pix/includes/SDL_system.h \
+  /home/samio/Pix/includes/SDL_timer.h \
+  /home/samio/Pix/includes/SDL_version.h \
+  /home/samio/Pix/includes/SDL_locale.h \
+  /home/samio/Pix/includes/SDL_misc.h \
+  /home/samio/Pix/includes/SDL_image.h \
+  /home/samio/Pix/includes/SDL.h \
   /usr/include/c++/12.2.0/iostream \
   /usr/include/c++/12.2.0/ostream \
   /usr/include/c++/12.2.0/ios \
@@ -1074,6 +1080,9 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
   /usr/include/c++/12.2.0/bits/ostream.tcc \
   /usr/include/c++/12.2.0/istream \
   /usr/include/c++/12.2.0/bits/istream.tcc \
+  /home/samio/Pix/src/properties.h \
+  /usr/include/SDL2/SDL.h \
+  /usr/include/SDL2/SDL_image.h \
   /home/samio/Pix/src/board.h \
   /usr/include/c++/12.2.0/vector \
   /usr/include/c++/12.2.0/bits/stl_uninitialized.h \
@@ -1086,7 +1095,9 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/include/c++/12.2.0/bits/vector.tcc:
 
-/usr/include/c++/12.2.0/vector:
+/usr/include/SDL2/SDL_image.h:
+
+/usr/include/SDL2/SDL.h:
 
 /usr/include/c++/12.2.0/istream:
 
@@ -1098,11 +1109,7 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/include/bits/wctype-wchar.h:
 
-/usr/include/c++/12.2.0/cwctype:
-
 /usr/include/c++/12.2.0/bits/locale_facets.h:
-
-/usr/include/c++/12.2.0/bits/basic_ios.h:
 
 /usr/include/c++/12.2.0/bits/streambuf.tcc:
 
@@ -1120,15 +1127,13 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/include/bits/types/error_t.h:
 
-/usr/include/asm-generic/errno.h:
-
 /usr/include/linux/errno.h:
-
-/usr/include/errno.h:
 
 /usr/include/c++/12.2.0/cstdio:
 
 /usr/include/c++/12.2.0/bits/alloc_traits.h:
+
+/usr/include/c++/12.2.0/bits/basic_string.h:
 
 /usr/include/c++/12.2.0/bits/invoke.h:
 
@@ -1141,8 +1146,6 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 /usr/include/c++/12.2.0/bits/allocator.h:
 
 /usr/include/c++/12.2.0/string:
-
-/usr/include/c++/12.2.0/bits/locale_classes.h:
 
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/atomic_word.h:
 
@@ -1166,6 +1169,10 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/include/bits/cpu-set.h:
 
+/usr/include/bits/types/struct_sched_param.h:
+
+/usr/include/pthread.h:
+
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/gthr-default.h:
 
 /usr/include/c++/12.2.0/bits/ios_base.h:
@@ -1174,7 +1181,7 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/include/bits/locale.h:
 
-/usr/include/c++/12.2.0/bits/localefwd.h:
+/usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/c++locale.h:
 
 /usr/include/c++/12.2.0/cstdint:
 
@@ -1190,6 +1197,8 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/include/c++/12.2.0/bits/exception_ptr.h:
 
+/usr/include/c++/12.2.0/bits/exception.h:
+
 /usr/include/c++/12.2.0/exception:
 
 /usr/include/c++/12.2.0/cwchar:
@@ -1198,7 +1207,13 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/include/c++/12.2.0/bits/stringfwd.h:
 
-/usr/include/SDL2/SDL_image.h:
+/usr/include/c++/12.2.0/ostream:
+
+/home/samio/Pix/includes/SDL_image.h:
+
+/home/samio/Pix/includes/SDL_misc.h:
+
+/home/samio/Pix/src/properties.h:
 
 /usr/include/c++/12.2.0/tr1/modified_bessel_func.tcc:
 
@@ -1214,10 +1229,6 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512erintrin.h:
 
-/usr/include/SDL2/SDL_keycode.h:
-
-/usr/include/c++/12.2.0/tr1/poly_hermite.tcc:
-
 /usr/include/c++/12.2.0/tr1/exp_integral.tcc:
 
 /usr/include/c++/12.2.0/bits/concept_check.h:
@@ -1228,15 +1239,15 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/include/c++/12.2.0/ext/type_traits.h:
 
-/usr/include/bits/types/struct_sched_param.h:
-
-/usr/include/SDL2/SDL_pixels.h:
-
 /usr/include/c++/12.2.0/type_traits:
 
 /usr/include/c++/12.2.0/bits/stl_pair.h:
 
+/home/samio/Pix/includes/SDL_stdinc.h:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512fp16intrin.h:
+
+/home/samio/Pix/includes/SDL_quit.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512vbmi2intrin.h:
 
@@ -1264,7 +1275,11 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/include/bits/libm-simd-decl-stubs.h:
 
+/home/samio/Pix/includes/SDL_blendmode.h:
+
 /usr/include/c++/12.2.0/bits/cpp_type_traits.h:
+
+/usr/include/ctype.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/shaintrin.h:
 
@@ -1273,8 +1288,6 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/c++/12.2.0/bits/stl_iterator_base_funcs.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/xsavesintrin.h:
 
 /usr/include/c++/12.2.0/tr1/beta_function.tcc:
 
@@ -1288,6 +1301,8 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512vlbwintrin.h:
 
+/usr/include/c++/12.2.0/bits/exception_defines.h:
+
 /usr/include/wchar.h:
 
 /usr/include/strings.h:
@@ -1295,8 +1310,6 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 /usr/include/c++/12.2.0/bits/std_abs.h:
 
 /usr/include/c++/12.2.0/bits/stl_algobase.h:
-
-/usr/include/SDL2/SDL_events.h:
 
 /usr/include/bits/types/__locale_t.h:
 
@@ -1306,29 +1319,39 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/xsaveintrin.h:
 
-/usr/include/SDL2/SDL_touch.h:
+/usr/include/bits/types/struct___jmp_buf_tag.h:
+
+/usr/include/bits/wchar.h:
+
+/usr/include/bits/waitstatus.h:
 
 /usr/include/bits/timesize.h:
 
-/usr/include/c++/12.2.0/ostream:
-
-/usr/include/SDL2/SDL_assert.h:
-
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/c++config.h:
 
-/usr/include/c++/12.2.0/initializer_list:
+/usr/include/c++/12.2.0/tr1/gamma.tcc:
 
-/usr/include/c++/12.2.0/cstdlib:
+/usr/include/c++/12.2.0/stdlib.h:
 
-/usr/include/bits/types/clock_t.h:
+/home/samio/Pix/includes/SDL_cpuinfo.h:
 
 /usr/include/c++/12.2.0/bits/string_view.tcc:
 
 /usr/include/bits/types/__fpos_t.h:
 
-/usr/include/SDL2/SDL.h:
+/usr/include/bits/types/clock_t.h:
+
+/usr/include/c++/12.2.0/bits/charconv.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/stddef.h:
+
+/home/samio/Pix/includes/SDL_hints.h:
 
 /usr/include/bits/iscanonical.h:
+
+/usr/include/c++/12.2.0/tr1/poly_laguerre.tcc:
+
+/usr/include/math.h:
 
 /usr/include/c++/12.2.0/bits/refwrap.h:
 
@@ -1336,19 +1359,41 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/include/bits/pthreadtypes-arch.h:
 
+/home/samio/Pix/includes/SDL_guid.h:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/stdarg.h:
 
-/usr/include/sys/cdefs.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/waitpkgintrin.h:
+/usr/include/gnu/stubs-64.h:
 
 /usr/include/c++/12.2.0/bits/new_allocator.h:
 
 /usr/include/bits/struct_mutex.h:
 
-/usr/include/features-time64.h:
+/usr/include/sys/cdefs.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/waitpkgintrin.h:
+
+/usr/include/asm/errno.h:
+
+/usr/include/bits/stdint-uintn.h:
+
+/usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/bits/uintn-identity.h:
+
+/home/samio/Pix/includes/begin_code.h:
+
+/home/samio/Pix/includes/close_code.h:
+
+/usr/include/c++/12.2.0/tr1/ell_integral.tcc:
+
+/usr/include/bits/math-vector.h:
 
 /usr/include/c++/12.2.0/pstl/pstl_config.h:
+
+/home/samio/Pix/includes/SDL_rwops.h:
 
 /usr/include/bits/types/__fpos64_t.h:
 
@@ -1362,17 +1407,17 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /home/samio/Pix/src/board.cpp:
 
-/usr/include/c++/12.2.0/bits/charconv.h:
+/home/samio/Pix/includes/SDL_config.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/stddef.h:
+/usr/include/bits/stdio_lim.h:
 
-/usr/include/SDL2/SDL_main.h:
+/usr/include/c++/12.2.0/cerrno:
 
-/usr/include/c++/12.2.0/ext/atomicity.h:
+/usr/include/c++/12.2.0/bits/stl_iterator.h:
 
-/usr/include/bits/endian.h:
+/usr/include/bits/types/struct_timeval.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/enqcmdintrin.h:
+/home/samio/Pix/includes/SDL_mutex.h:
 
 /usr/include/bits/errno.h:
 
@@ -1380,17 +1425,17 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/include/c++/12.2.0/cmath:
 
+/home/samio/Pix/includes/SDL_scancode.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/lwpintrin.h:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/hresetintrin.h:
 
-/usr/include/SDL2/SDL_filesystem.h:
+/usr/include/c++/12.2.0/bits/postypes.h:
 
-/usr/include/bits/math-vector.h:
+/home/samio/Pix/src/window.h:
 
-/usr/include/c++/12.2.0/cerrno:
-
-/usr/include/c++/12.2.0/bits/stl_iterator.h:
-
-/usr/include/bits/stdio_lim.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/mm_malloc.h:
 
 /usr/include/string.h:
 
@@ -1400,63 +1445,29 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/include/bits/time64.h:
 
-/usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/os_defines.h:
-
-/usr/include/c++/12.2.0/bits/move.h:
-
-/usr/include/bits/types/sigset_t.h:
-
-/usr/include/asm/errno.h:
-
-/usr/include/bits/stdint-uintn.h:
-
-/usr/include/bits/types/__sigset_t.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/sgxintrin.h:
-
-/usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h:
-
-/usr/include/bits/typesizes.h:
-
-/usr/include/SDL2/SDL_cpuinfo.h:
-
-/usr/include/c++/12.2.0/tr1/ell_integral.tcc:
+/usr/include/bits/byteswap.h:
 
 /usr/include/c++/12.2.0/math.h:
-
-/usr/include/SDL2/SDL_audio.h:
 
 /usr/include/bits/types/__mbstate_t.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/immintrin.h:
 
-/usr/include/c++/12.2.0/bits/postypes.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/xsavesintrin.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/mm_malloc.h:
+/usr/include/c++/12.2.0/cwctype:
 
-/home/samio/Pix/src/window.h:
+/home/samio/Pix/includes/SDL_main.h:
 
-/usr/include/math.h:
+/usr/include/stdc-predef.h:
 
-/usr/include/c++/12.2.0/tr1/poly_laguerre.tcc:
+/home/samio/Pix/src/main.cpp:
 
-/usr/include/c++/12.2.0/bits/exception_defines.h:
+/usr/include/bits/thread-shared-types.h:
 
-/usr/include/SDL2/SDL_config.h:
+/usr/include/bits/types/struct_timespec.h:
 
-/usr/include/gnu/stubs-64.h:
-
-/usr/include/c++/12.2.0/bits/functional_hash.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512bf16vlintrin.h:
-
-/usr/include/bits/endianness.h:
-
-/usr/include/SDL2/close_code.h:
-
-/usr/include/SDL2/SDL_misc.h:
-
-/usr/include/c++/12.2.0/ext/numeric_traits.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512vbmivlintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/clflushoptintrin.h:
 
@@ -1468,39 +1479,55 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/ia32intrin.h:
 
+/home/samio/Pix/includes/SDL_messagebox.h:
+
+/usr/include/c++/12.2.0/bits/functional_hash.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512bf16vlintrin.h:
+
+/usr/include/bits/endianness.h:
+
+/usr/include/c++/12.2.0/bits/locale_classes.h:
+
+/home/samio/Pix/includes/SDL_joystick.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/sgxintrin.h:
+
+/usr/include/bits/types/__sigset_t.h:
+
+/usr/include/c++/12.2.0/vector:
+
+/home/samio/Pix/includes/SDL_video.h:
+
 /usr/include/c++/12.2.0/bits/cxxabi_forced.h:
 
 /usr/include/bits/types/mbstate_t.h:
 
 /usr/include/c++/12.2.0/limits:
 
-/usr/include/SDL2/SDL_guid.h:
-
 /usr/include/sys/select.h:
+
+/usr/include/c++/12.2.0/bits/basic_ios.h:
+
+/home/samio/Pix/includes/SDL.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/movdirintrin.h:
 
 /usr/include/c++/12.2.0/clocale:
 
 /usr/include/bits/types/struct_FILE.h:
 
-/usr/include/bits/types/struct_timeval.h:
+/usr/include/bits/types/sigset_t.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512vbmivlintrin.h:
+/usr/include/c++/12.2.0/bits/functexcept.h:
 
-/usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/c++locale.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/fxsrintrin.h:
 
-/usr/include/SDL2/SDL_log.h:
-
-/home/samio/Pix/src/main.cpp:
-
-/usr/include/bits/thread-shared-types.h:
-
-/usr/include/stdc-predef.h:
+/usr/include/bits/pthreadtypes.h:
 
 /usr/include/bits/stdint-intn.h:
 
 /usr/include/bits/types/clockid_t.h:
-
-/usr/include/SDL2/SDL_timer.h:
 
 /usr/include/bits/atomic_wide_counter.h:
 
@@ -1508,7 +1535,13 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/include/c++/12.2.0/bits/stl_iterator_base_types.h:
 
+/usr/include/c++/12.2.0/ext/string_conversions.h:
+
+/usr/include/bits/types/time_t.h:
+
 /usr/include/bits/struct_rwlock.h:
+
+/home/samio/Pix/includes/SDL_surface.h:
 
 /usr/include/bits/mathcalls-narrow.h:
 
@@ -1536,53 +1569,37 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/include/c++/12.2.0/tr1/riemann_zeta.tcc:
 
-/usr/include/SDL2/SDL_gamecontroller.h:
-
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/float.h:
 
-/usr/include/SDL2/SDL_locale.h:
+/usr/include/errno.h:
 
-/usr/include/bits/types/struct___jmp_buf_tag.h:
+/home/samio/Pix/includes/SDL_assert.h:
 
-/usr/include/bits/wchar.h:
+/usr/include/features-time64.h:
 
-/usr/include/bits/waitstatus.h:
+/home/samio/Pix/includes/SDL_atomic.h:
 
-/usr/include/SDL2/SDL_atomic.h:
+/home/samio/Pix/includes/SDL_audio.h:
 
-/usr/include/SDL2/SDL_error.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/clzerointrin.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/uintrintrin.h:
+/usr/include/c++/12.2.0/ext/numeric_traits.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/mmintrin.h:
+/home/samio/Pix/includes/SDL_error.h:
 
-/usr/include/c++/12.2.0/ext/string_conversions.h:
+/usr/include/c++/12.2.0/bits/localefwd.h:
 
-/usr/include/bits/types/time_t.h:
+/home/samio/Pix/includes/SDL_thread.h:
 
-/usr/include/SDL2/SDL_endian.h:
+/usr/include/c++/12.2.0/ext/atomicity.h:
 
-/usr/include/bits/fp-logb.h:
+/usr/include/bits/endian.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512vpopcntdqintrin.h:
+/home/samio/Pix/includes/SDL_pixels.h:
 
-/usr/include/SDL2/SDL_mutex.h:
+/home/samio/Pix/includes/SDL_clipboard.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/wbnoinvdintrin.h:
-
-/usr/include/c++/12.2.0/bits/exception.h:
-
-/usr/include/SDL2/SDL_thread.h:
-
-/usr/include/SDL2/SDL_stdinc.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512cdintrin.h:
-
-/usr/include/SDL2/SDL_rwops.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/lwpintrin.h:
-
-/usr/include/SDL2/SDL_clipboard.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512fp16vlintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/x86gprintrin.h:
 
@@ -1592,13 +1609,9 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/adxintrin.h:
 
-/usr/include/SDL2/SDL_sensor.h:
-
 /usr/include/c++/12.2.0/iostream:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/bmiintrin.h:
-
-/usr/include/SDL2/SDL_render.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/keylockerintrin.h:
 
@@ -1608,33 +1621,33 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/gfniintrin.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/enqcmdintrin.h:
+
+/home/samio/Pix/includes/SDL_filesystem.h:
+
 /usr/include/locale.h:
+
+/home/samio/Pix/includes/SDL_platform.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/cetintrin.h:
 
+/home/samio/Pix/includes/SDL_locale.h:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/cldemoteintrin.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/clzerointrin.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/movdirintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/mwaitintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/pconfigintrin.h:
 
-/usr/include/bits/types.h:
-
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512bitalgintrin.h:
+
+/usr/include/bits/types.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/xsaveoptintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/prfchwintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/popcntintrin.h:
-
-/usr/include/bits/stdlib-float.h:
-
-/usr/include/SDL2/SDL_metal.h:
 
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/ctype_inline.h:
 
@@ -1650,6 +1663,14 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/tsxldtrkintrin.h:
 
+/home/samio/Pix/includes/SDL_hidapi.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/uintrintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/mmintrin.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/wbnoinvdintrin.h:
+
 /usr/include/c++/12.2.0/bits/cxxabi_init_exception.h:
 
 /usr/include/c++/12.2.0/ios:
@@ -1659,6 +1680,12 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/xtestintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512vp2intersectvlintrin.h:
+
+/usr/include/asm-generic/errno.h:
+
+/home/samio/Pix/includes/SDL_keyboard.h:
+
+/home/samio/Pix/includes/SDL_endian.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/pmmintrin.h:
 
@@ -1682,6 +1709,8 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx2intrin.h:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512cdintrin.h:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512vlintrin.h:
 
 /usr/include/c++/12.2.0/string_view:
@@ -1696,11 +1725,7 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512dqintrin.h:
 
-/usr/include/SDL2/SDL_joystick.h:
-
 /usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/gthr.h:
-
-/usr/include/SDL2/SDL_platform.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512vldqintrin.h:
 
@@ -1708,11 +1733,15 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512vbmiintrin.h:
 
-/usr/include/SDL2/SDL_blendmode.h:
-
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx5124fmapsintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx5124vnniwintrin.h:
+
+/usr/include/bits/fp-logb.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512vpopcntdqintrin.h:
+
+/home/samio/Pix/includes/SDL_shape.h:
 
 /usr/include/c++/12.2.0/iosfwd:
 
@@ -1726,19 +1755,13 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512vnnivlintrin.h:
 
+/home/samio/Pix/includes/SDL_version.h:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/rdseedintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512vpopcntdqvlintrin.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512vp2intersectintrin.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/avx512fp16vlintrin.h:
-
-/usr/include/bits/byteswap.h:
-
-/usr/include/SDL2/SDL_video.h:
-
-/usr/include/SDL2/SDL_rect.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/vpclmulqdqintrin.h:
 
@@ -1748,56 +1771,48 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/amxbf16intrin.h:
 
-/usr/include/SDL2/SDL_surface.h:
-
-/usr/include/SDL2/SDL_keyboard.h:
-
-/usr/include/c++/12.2.0/bits/functexcept.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include/fxsrintrin.h:
-
-/usr/include/bits/pthreadtypes.h:
-
-/usr/include/SDL2/SDL_scancode.h:
-
-/usr/include/SDL2/SDL_mouse.h:
-
-/usr/include/SDL2/SDL_shape.h:
-
-/usr/include/SDL2/SDL_quit.h:
-
-/usr/include/SDL2/SDL_haptic.h:
-
-/usr/include/ctype.h:
-
-/usr/include/SDL2/SDL_gesture.h:
-
-/usr/include/bits/types/struct_timespec.h:
-
-/usr/include/SDL2/SDL_hidapi.h:
-
-/usr/include/pthread.h:
-
-/usr/include/SDL2/SDL_hints.h:
-
-/usr/include/c++/12.2.0/bits/basic_string.h:
-
-/usr/include/SDL2/SDL_loadso.h:
-
 /usr/include/c++/12.2.0/ext/alloc_traits.h:
 
-/usr/include/SDL2/SDL_messagebox.h:
+/home/samio/Pix/includes/SDL_events.h:
 
-/usr/include/c++/12.2.0/tr1/gamma.tcc:
+/home/samio/Pix/includes/SDL_rect.h:
 
-/usr/include/c++/12.2.0/stdlib.h:
+/home/samio/Pix/includes/SDL_keycode.h:
 
-/usr/include/SDL2/SDL_power.h:
+/home/samio/Pix/includes/SDL_mouse.h:
 
-/usr/include/SDL2/SDL_system.h:
+/usr/include/c++/12.2.0/tr1/poly_hermite.tcc:
 
-/usr/include/SDL2/begin_code.h:
+/home/samio/Pix/includes/SDL_gamecontroller.h:
 
-/usr/include/bits/uintn-identity.h:
+/usr/include/bits/stdlib-float.h:
 
-/usr/include/SDL2/SDL_version.h:
+/home/samio/Pix/includes/SDL_sensor.h:
+
+/home/samio/Pix/includes/SDL_gesture.h:
+
+/home/samio/Pix/includes/SDL_touch.h:
+
+/home/samio/Pix/includes/SDL_haptic.h:
+
+/home/samio/Pix/includes/SDL_loadso.h:
+
+/home/samio/Pix/includes/SDL_log.h:
+
+/home/samio/Pix/includes/SDL_metal.h:
+
+/home/samio/Pix/includes/SDL_power.h:
+
+/home/samio/Pix/includes/SDL_render.h:
+
+/usr/include/c++/12.2.0/initializer_list:
+
+/usr/include/c++/12.2.0/cstdlib:
+
+/home/samio/Pix/includes/SDL_system.h:
+
+/usr/include/c++/12.2.0/x86_64-pc-linux-gnu/bits/os_defines.h:
+
+/usr/include/c++/12.2.0/bits/move.h:
+
+/home/samio/Pix/includes/SDL_timer.h:
