@@ -23,8 +23,9 @@ void window::init(){
     SDL_GetCurrentDisplayMode(0, &DM);
     wP.w = DM.w / 1.5;
     wP.h = DM.h / 1.5;
-    Uint32 flags = SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE;
+    Uint32 flags = SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
     SDL_CreateWindowAndRenderer(wP.w, wP.h, flags, &wind, &rend);
+    SDL_SetRenderDrawBlendMode(rend, SDL_BLENDMODE_BLEND);
 }
 
 void window::updateWP(boardPorperties bP){
@@ -69,7 +70,6 @@ void window::handleWindowEvent(boardPorperties &bP){
     
             case SDL_MOUSEMOTION:  
                 xF = yF = 0;
-            
                 if(SDL_GetMouseState(&wP.cursorX, &wP.cursorY) & SDL_BUTTON_MMASK){
                     int dX, dy;
                     if(first){
@@ -96,6 +96,10 @@ void window::handleWindowEvent(boardPorperties &bP){
             break; 
 
         case SDL_MOUSEBUTTONDOWN:
+            if(wP.cursorX > bP.gridX+(2*bP.cellSize) && wP.cursorX < bP.board.windowX && 
+                    wP.cursorY > bP.gridY+(2*bP.cellSize) && wP.cursorY < bP.board.windowY){
+                std::cout << "boobs" << std::endl;
+            }
         break;
 
         case SDL_MOUSEBUTTONUP:

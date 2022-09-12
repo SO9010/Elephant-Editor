@@ -8,15 +8,17 @@ board::~board(){
 }
 
 void board::drawGhostCursor(windowProperty wP){
-        ghostCursor.x = (wP.cursorX / bP.cellSize) * bP.cellSize;
-        ghostCursor.y = (wP.cursorY / bP.cellSize) * bP.cellSize;
-        SDL_SetRenderDrawColor(window::rend, 144, 144, 144, 255);
+        SDL_Rect            ghostCursor = {0, 0, bP.cellSize,
+                                             bP.cellSize}; 
+        ghostCursor.x = ((wP.cursorX / bP.cellSize) * bP.cellSize);
+        ghostCursor.y = ((wP.cursorY / bP.cellSize) * bP.cellSize);
+        SDL_SetRenderDrawColor(window::rend, 33, 33, 33, 255);
         SDL_RenderFillRect(window::rend, &ghostCursor);
 }
 
 void board::createCanvas(){
     bP.drawArea.clear();
-    bP.drawArea.resize(bP.board.x-2, std::vector<std::string>(bP.board.y-2, "-1"));
+    bP.drawArea.resize(bP.board.x-2, std::vector<SDL_Color *>(bP.board.y-2, NULL));
 }
 
 void board::resizeCanvas(){
@@ -24,17 +26,14 @@ void board::resizeCanvas(){
 }
 
 void board::renderCanvas(){
-    for(int i = 0; i <= bP.drawArea.size(); i++){
-        for(int j = 0; i <= bP.drawArea[i].size(); j++){
-            if(std::stoi(bP.drawArea[i][j]) >= 0){
-                for(int i = 0; i < bP.drawArea.size(); i++){
-                    for(int j = 0; j < bP.drawArea[i].size(); j++){
-                        std::cout << bP.drawArea[i][j] << " ";
-                    }
-                    std::cout << std::endl;
-                }
-                std::cout << "-----------------" << std::endl;
-            }
+    SDL_Rect rect {0, 0, bP.cellSize, bP.cellSize};
+    for(int i = 0; i < bP.drawArea.size(); i++){
+        for(int j = 0; j < bP.drawArea[i].size(); j++){
+            SDL_SetRenderDrawColor(window::rend, bP.drawArea[i][j]->r, bP.drawArea[i][j]->g, bP.drawArea[i][j]->b, bP.drawArea[i][j]->a);
+           // SDL_RenderFillRect(window::rend, );
+           for(int i = 0, j = 0; i < 1+(bP.board.x + 2)*bP.cellSize || j < 1+(bP.board.y + 2)*bP.cellSize; i+=bP.cellSize, j+=bP.cellSize){
+                SDL_RenderFillRect(window::rend, &rect);
+           }
         }
     }
 }

@@ -8,17 +8,11 @@
 struct canvas{
     int                 x, y;
     int                 windowX, windowY;
-    int                 drawAreaX, drawAreaY;
 };
 
 struct boardPorperties{
     canvas              board;
-    std::vector<std::vector<std::string>> drawArea;     /*The format for the number will be:
-                                                        *   |-----|-----|-----|-----|---------------|
-                                                        *   | [R] | [G] | [B] | [A] | [Render/Hint] |
-                                                        *   |-----|-----|-----|-----|---------------|
-                                                        *   | 000 | 000 | 000 | 000 |       0       |
-                                                        */
+    std::vector<std::vector<SDL_Color *>> drawArea;    
     int                 cellSize;
     int                 displaceX = 0, displaceY = 0, 
                             fDisplaceX = 0, fDisplaceY = 0;
