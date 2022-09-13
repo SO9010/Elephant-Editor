@@ -8,14 +8,15 @@ int main(){
     wind->init();
 
     board grid;
-
+    int originalBoardX = 4;
+    int originalBoardY = 4;
     grid.bP.board.x = 8;
     grid.bP.board.y = 8;
     grid.bP.cellSize = 64;
 
     while(wind->wP.running){
         wind->handleWindowEvent(grid.bP); 
-        grid.resizeCanvas();
+        grid.resizeCanvas(originalBoardX, originalBoardY);
         grid.drawGrid(wind->wP);
     }
     return 0;

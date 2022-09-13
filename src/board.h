@@ -7,8 +7,7 @@ public:
     board();
     ~board();
     boardPorperties     bP;
-    void                resizeCanvas();
-    void                createCanvas();
+    void                resizeCanvas(int &originalBoardX, int &originalBoardY);
     void                drawGrid(windowProperty wP);
     void                drawGhostCursor(windowProperty wP);
 private:

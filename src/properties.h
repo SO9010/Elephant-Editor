@@ -5,6 +5,10 @@
 #include <vector>
 #include <string.h>
 
+struct tools{
+    SDL_Color           clickColour = {255, 255, 255, 255};
+};
+
 struct canvas{
     int                 x, y;
     int                 windowX, windowY;
@@ -12,6 +16,7 @@ struct canvas{
 
 struct boardPorperties{
     canvas              board;
+    tools               tools;
     std::vector<std::vector<SDL_Color *>> drawArea;    
     int                 cellSize;
     int                 displaceX = 0, displaceY = 0, 
