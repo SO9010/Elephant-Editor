@@ -70,6 +70,13 @@ build CMakeFiles/pix.dir/src/window.cpp.o: CXX_COMPILER__pix_Debug /home/samio/P
   OBJECT_DIR = CMakeFiles/pix.dir
   OBJECT_FILE_DIR = CMakeFiles/pix.dir/src
 
+build CMakeFiles/pix.dir/src/toolBar.cpp.o: CXX_COMPILER__pix_Debug /home/samio/Pix/src/toolBar.cpp || cmake_object_order_depends_target_pix
+  DEP_FILE = CMakeFiles/pix.dir/src/toolBar.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/src -I/includes
+  OBJECT_DIR = CMakeFiles/pix.dir
+  OBJECT_FILE_DIR = CMakeFiles/pix.dir/src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target pix
@@ -78,7 +85,7 @@ build CMakeFiles/pix.dir/src/window.cpp.o: CXX_COMPILER__pix_Debug /home/samio/P
 #############################################
 # Link the executable pix
 
-build pix: CXX_EXECUTABLE_LINKER__pix_Debug CMakeFiles/pix.dir/src/board.cpp.o CMakeFiles/pix.dir/src/main.cpp.o CMakeFiles/pix.dir/src/window.cpp.o
+build pix: CXX_EXECUTABLE_LINKER__pix_Debug CMakeFiles/pix.dir/src/board.cpp.o CMakeFiles/pix.dir/src/main.cpp.o CMakeFiles/pix.dir/src/window.cpp.o CMakeFiles/pix.dir/src/toolBar.cpp.o
   FLAGS = -g
   LINK_FLAGS = -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lstdc++
   OBJECT_DIR = CMakeFiles/pix.dir

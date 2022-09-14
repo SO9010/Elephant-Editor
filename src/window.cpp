@@ -30,11 +30,13 @@ void window::init(){
 
 void window::updateWP(boardPorperties bP){
     SDL_GetWindowSize(wind, &wP.w, &wP.h);
-    wP.cW = (wP.w/2) + bP.displaceX;
-    wP.cH = (wP.h/2) + bP.displaceY;
+    wP.cWo = (wP.w/2) + bP.displaceX;
+    wP.cW = (wP.w/2);
+    wP.cHo = (wP.h/2) + bP.displaceY;
+    wP.cH = (wP.h/2);
 }
 
-void window::handleWindowEvent(boardPorperties &bP){
+void window::handleWindowEvent(boardPorperties &bP, tools &tools){
     if(SDL_WaitEvent(&event)){
         const Uint8 *state = SDL_GetKeyboardState(NULL);
         updateWP(bP);
@@ -93,23 +95,19 @@ void window::handleWindowEvent(boardPorperties &bP){
                 else if(SDL_GetMouseState(&wP.cursorX, &wP.cursorY) & SDL_BUTTON_LMASK){
                     if(wP.cursorX > bP.gridX+(2*bP.cellSize) && wP.cursorX < bP.board.windowX && 
                         wP.cursorY > bP.gridY+(2*bP.cellSize) && wP.cursorY < bP.board.windowY){
-
-                    int tmp[2] = {0,0};
-                    for(int i = 0; i < bP.board.x - 2; i++){
-                        for(int j = 0; j < bP.board.y - 2; j++){
-                            if((wP.cursorY - (bP.gridY+(3*bP.cellSize)) - 1) > (bP.cellSize * j)){
-                                tmp[1] = j + 1;
-                            } 
+                        int tmp[2] = {0,0};
+                        for(int i = 0; i < bP.board.x - 2; i++){
+                            for(int j = 0; j < bP.board.y - 2; j++){
+                                if((wP.cursorY - (bP.gridY+(3*bP.cellSize)) - 1) > (bP.cellSize * j)){
+                                    tmp[1] = j + 1;
+                                } 
+                            }
+                            if((wP.cursorX - (bP.gridX+(3*bP.cellSize)) - 1) > (bP.cellSize * i)){
+                                tmp[0] = i + 1;
+                            }
                         }
-                        if((wP.cursorX - (bP.gridX+(3*bP.cellSize)) - 1) > (bP.cellSize * i)){
-                            tmp[0] = i + 1;
-                        }
+                        bP.drawArea[tmp[1]][tmp[0]] = &tools.clickColour;
                     }
-
-                    std::cout << tmp[0] << " x "<< tmp[1] << std::endl;
-
-                    bP.drawArea[tmp[1]][tmp[0]] = &bP.tools.clickColour;
-                }
                 }
                 else{
                     if(!first){
@@ -121,7 +119,7 @@ void window::handleWindowEvent(boardPorperties &bP){
 
         case SDL_MOUSEBUTTONDOWN:
             if(event.button.button == SDL_BUTTON_LEFT){
-                if(wP.cursorX > bP.gridX+(2*bP.cellSize) && wP.cursorX < bP.board.windowX && 
+               /*  if(wP.cursorX > bP.gridX+(2*bP.cellSize) && wP.cursorX < bP.board.windowX && 
                         wP.cursorY > bP.gridY+(2*bP.cellSize) && wP.cursorY < bP.board.windowY){
 
                     int tmp[2] = {0,0};
@@ -135,11 +133,9 @@ void window::handleWindowEvent(boardPorperties &bP){
                             tmp[0] = i + 1;
                         }
                     }
-
                     std::cout << tmp[0] << " x "<< tmp[1] << std::endl;
-
-                    bP.drawArea[tmp[1]][tmp[0]] = &bP.tools.clickColour;
-                }
+                    bP.drawArea[tmp[1]][tmp[0]] = &tools.clickColour;
+                } */ 
             }
         break;
 

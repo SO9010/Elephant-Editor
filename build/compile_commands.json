@@ -13,5 +13,10 @@
   "directory": "/home/samio/Pix/build",
   "command": "/usr/bin/clang++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/window.cpp.o -c /home/samio/Pix/src/window.cpp",
   "file": "/home/samio/Pix/src/window.cpp"
+},
+{
+  "directory": "/home/samio/Pix/build",
+  "command": "/usr/bin/clang++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/toolBar.cpp.o -c /home/samio/Pix/src/toolBar.cpp",
+  "file": "/home/samio/Pix/src/toolBar.cpp"
 }
 ]

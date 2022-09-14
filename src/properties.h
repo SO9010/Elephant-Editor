@@ -6,7 +6,7 @@
 #include <string.h>
 
 struct tools{
-    SDL_Color           clickColour = {255, 255, 255, 255};
+    SDL_Color           clickColour = {45, 200, 100, 255};
 };
 
 struct canvas{
@@ -16,7 +16,6 @@ struct canvas{
 
 struct boardPorperties{
     canvas              board;
-    tools               tools;
     std::vector<std::vector<SDL_Color *>> drawArea;    
     int                 cellSize;
     int                 displaceX = 0, displaceY = 0, 
@@ -26,7 +25,8 @@ struct boardPorperties{
 
 struct windowProperty{
     int                 w, h;                   //Width, hight
-    int                 cW, cH;                 //Center width/hight + offset
+    int                 cWo, cHo;               //Center width/hight + offset
+    int                 cW, cH;               //Center width/hight
     bool                running = false;
     int                 cursorX, cursorY;       //Cursor position x/y
 };

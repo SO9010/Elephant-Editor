@@ -19,12 +19,12 @@ void board::drawGhostCursor(windowProperty wP){
 void board::resizeCanvas(int &originalBoardX, int &originalBoardY){
     if(originalBoardX != bP.board.x -2 || originalBoardY != bP.board.y -2){
         std::vector<std::vector<SDL_Color *>> tmpCanvas {bP.drawArea};
-        SDL_Color tmp = {255, 255, 255 , 0};
+        SDL_Color tmp = {255, 255, 255, 0};
         bP.drawArea.clear();
         bP.drawArea.resize(bP.board.x-2, std::vector<SDL_Color *>(bP.board.y-2, &tmp));
         for(int i = 0; i < bP.drawArea.size() && i < tmpCanvas.size(); i++){
             for(int j = 0; j < bP.drawArea[i].size() && j < tmpCanvas[i].size(); j++){
-                if(tmpCanvas[i][j] != nullptr){
+                if(tmpCanvas[i][j] != nullptr && bP.drawArea[i+1][j+1] != tmpCanvas[i][j]){
                     std::cout << i << " | " << j << "\n";
                     if(originalBoardX < bP.board.x -2 || originalBoardY < bP.board.y -2){
                         bP.drawArea[i+1][j+1] = tmpCanvas[i][j];    
@@ -66,11 +66,13 @@ void board::renderCanvas(){
     }
 }
 
+
+
 void board::drawGrid(windowProperty wP){
-    bP.gridX = (wP.cW - ((bP.board.x + 2)*bP.cellSize)/2);
-    bP.gridY = (wP.cH - ((bP.board.y + 2)*bP.cellSize)/2);
+    bP.gridX = (wP.cWo - ((bP.board.x + 2)*bP.cellSize)/2);
+    bP.gridY = (wP.cHo - ((bP.board.y + 2)*bP.cellSize)/2);
     for(int i = 0, j = 0; i < 1+(bP.board.x + 2)*bP.cellSize || j < 1+(bP.board.y + 2)*bP.cellSize; i+=bP.cellSize, j+=bP.cellSize){
-        SDL_SetRenderDrawColor(window::rend, 255, 255, 255, 20);
+        SDL_SetRenderDrawColor(window::rend, 125, 125, 200, 1*(bP.cellSize/2.5));
         //Draw grid
         //Verticle Lines
         SDL_RenderDrawLineF(window::rend, i+bP.gridX, 0, i+bP.gridX, wP.h); 
