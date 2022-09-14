@@ -21,7 +21,7 @@ DEPENDENCIES:
 ##### Arch 
     sudo pacman -S sdl2 sdl2_image sdl2_ttf
 Compiling:
-All you now need to do is change directory into the build one and use the "make" command
+    Vscode only working to compile at the moment
 #### Current ways to work
 
 * Press "ctrl p" to add more cells evenly to every side
