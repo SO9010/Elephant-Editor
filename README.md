@@ -17,8 +17,11 @@ This is a 2d pixel art editor/creator created using the SDL2 library.
 
 #### Compiling details
 
-    All you need to do is go into the build dir and then type make then to run it do "./pix".
-
+DEPENDENCIES:
+##### Arch 
+    sudo pacman -S sdl2 sdl2_image sdl2_ttf
+Compiling:
+All you now need to do is change directory into the build one and use the "make" command
 #### Current ways to work
 
 * Press "ctrl p" to add more cells evenly to every side
