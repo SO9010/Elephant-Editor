@@ -46,10 +46,56 @@ void window::handleWindowEvent(boardPorperties &bP, tools &tools){
             break;
             case SDL_KEYDOWN:
                 if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_P]){
-                    bP.board.x += 2;
-                    bP.board.y += 2;
+                    if(bP.board.x <= 128){
+                        bP.board.x += 2;
+                    }
+                    if(bP.board.y <= 128){
+                        bP.board.y += 2;
+                    }
                 }
-               if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_M]){
+                if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_1]){
+                    tools.clickColour.r = 255;
+                    tools.clickColour.g = 255;
+                    tools.clickColour.b = 255;
+                    tools.clickColour.a = 255;
+                }
+                if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_E]){
+                    tools.clickColour.r = 255;
+                    tools.clickColour.g = 255;
+                    tools.clickColour.b = 255;
+                    tools.clickColour.a = 0;
+                }
+                if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_2]){
+                    tools.clickColour.r = 0;
+                    tools.clickColour.g = 0;
+                    tools.clickColour.b = 0;
+                    tools.clickColour.a = 255;                    
+                }
+                if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_3]){
+                    tools.clickColour.r = 255;
+                    tools.clickColour.g = 0;
+                    tools.clickColour.b = 0;
+                    tools.clickColour.a = 255;
+                }
+                if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_4]){
+                    tools.clickColour.r = 0;
+                    tools.clickColour.g = 255;
+                    tools.clickColour.b = 0;
+                    tools.clickColour.a = 255;
+                }
+                if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_5]){
+                    tools.clickColour.r = 255;
+                    tools.clickColour.g = 0;
+                    tools.clickColour.b = 0;
+                    tools.clickColour.a = 255;
+                }
+                if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_6]){
+                    tools.clickColour.r = 0;
+                    tools.clickColour.g = 255;
+                    tools.clickColour.b = 0;
+                    tools.clickColour.a = 255;
+                }
+                if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_M]){
                     if(bP.board.x > 4){
                         bP.board.x -= 2;
                     }
@@ -57,8 +103,12 @@ void window::handleWindowEvent(boardPorperties &bP, tools &tools){
                         bP.board.y -= 2;
                     }
                 }
-                if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_R]){
+                if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_C]){
                     //bP.drawArea.clear();
+                    tools.clickColour.r += 4;
+                    tools.clickColour.g += 4;
+                    tools.clickColour.b += 4;
+
                 }  
             break;
 
@@ -106,7 +156,10 @@ void window::handleWindowEvent(boardPorperties &bP, tools &tools){
                                 tmp[0] = i + 1;
                             }
                         }
-                        bP.drawArea[tmp[1]][tmp[0]] = &tools.clickColour;
+                        bP.drawArea[tmp[1]][tmp[0]].r = tools.clickColour.r;
+                        bP.drawArea[tmp[1]][tmp[0]].g = tools.clickColour.g;
+                        bP.drawArea[tmp[1]][tmp[0]].b = tools.clickColour.b;
+                        bP.drawArea[tmp[1]][tmp[0]].a = tools.clickColour.a;
                     }
                 }
                 else{
@@ -119,7 +172,7 @@ void window::handleWindowEvent(boardPorperties &bP, tools &tools){
 
         case SDL_MOUSEBUTTONDOWN:
             if(event.button.button == SDL_BUTTON_LEFT){
-               /*  if(wP.cursorX > bP.gridX+(2*bP.cellSize) && wP.cursorX < bP.board.windowX && 
+                if(wP.cursorX > bP.gridX+(2*bP.cellSize) && wP.cursorX < bP.board.windowX && 
                         wP.cursorY > bP.gridY+(2*bP.cellSize) && wP.cursorY < bP.board.windowY){
 
                     int tmp[2] = {0,0};
@@ -133,9 +186,11 @@ void window::handleWindowEvent(boardPorperties &bP, tools &tools){
                             tmp[0] = i + 1;
                         }
                     }
-                    std::cout << tmp[0] << " x "<< tmp[1] << std::endl;
-                    bP.drawArea[tmp[1]][tmp[0]] = &tools.clickColour;
-                } */ 
+                    bP.drawArea[tmp[1]][tmp[0]].r = tools.clickColour.r;
+                    bP.drawArea[tmp[1]][tmp[0]].g = tools.clickColour.g;
+                    bP.drawArea[tmp[1]][tmp[0]].b = tools.clickColour.b;
+                    bP.drawArea[tmp[1]][tmp[0]].a = tools.clickColour.a;
+                }  
             }
         break;
 

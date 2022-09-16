@@ -1,9 +1,9 @@
 # ninja log v5
-1	396	1663170066766647276	CMakeFiles/pix.dir/src/toolBar.cpp.o	ef75bf3ee8b772ff
-1	443	1663171827653265936	CMakeFiles/pix.dir/src/board.cpp.o	69345f258da05824
-1	384	1663171100099099978	CMakeFiles/pix.dir/src/main.cpp.o	a9d6c4c3e0405b36
-1	420	1663171566489401749	CMakeFiles/pix.dir/src/window.cpp.o	272841befff06e63
-443	492	1663171827703266063	pix	5c594772d55471b7
+2	681	1663356471277786663	CMakeFiles/pix.dir/src/toolBar.cpp.o	ef75bf3ee8b772ff
+1	617	1663359618832763297	CMakeFiles/pix.dir/src/board.cpp.o	69345f258da05824
+1	645	1663338735830565862	CMakeFiles/pix.dir/src/main.cpp.o	a9d6c4c3e0405b36
+1	680	1663356451044454339	CMakeFiles/pix.dir/src/window.cpp.o	272841befff06e63
+617	682	1663359618902763293	pix	5c594772d55471b7
 1	447	1662895554222409264	CMakeFiles/pix.dir/src/window.o	9d5f317a5380fdb6
 0	474	1662895554245742673	CMakeFiles/pix.dir/src/board.o	663ba029d8865fc4
 1	443	1662895554215742574	CMakeFiles/pix.dir/src/main.o	f7e02cb518a64d73

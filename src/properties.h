@@ -4,9 +4,11 @@
 #include <SDL2/SDL_image.h>
 #include <vector>
 #include <string.h>
+#include <memory>
 
 struct tools{
-    SDL_Color           clickColour = {45, 200, 100, 255};
+    SDL_Color           clickColour;
+    Uint8               penSize = 1;
 };
 
 struct canvas{
@@ -16,7 +18,7 @@ struct canvas{
 
 struct boardPorperties{
     canvas              board;
-    std::vector<std::vector<SDL_Color *>> drawArea;    
+    std::vector<std::vector<SDL_Color>> drawArea;    
     int                 cellSize;
     int                 displaceX = 0, displaceY = 0, 
                             fDisplaceX = 0, fDisplaceY = 0;

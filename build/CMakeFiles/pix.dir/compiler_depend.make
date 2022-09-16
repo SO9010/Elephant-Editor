@@ -720,12 +720,13 @@ CMakeFiles/pix.dir/src/main.o: /home/samio/Pix/src/main.cpp \
   /home/samio/Pix/src/properties.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_image.h \
-  /home/samio/Pix/src/board.h \
   /usr/include/c++/12.2.0/vector \
   /usr/include/c++/12.2.0/bits/stl_uninitialized.h \
   /usr/include/c++/12.2.0/bits/stl_vector.h \
   /usr/include/c++/12.2.0/bits/stl_bvector.h \
-  /usr/include/c++/12.2.0/bits/vector.tcc
+  /usr/include/c++/12.2.0/bits/vector.tcc \
+  /home/samio/Pix/src/board.h \
+  /home/samio/Pix/src/toolBar.h
 
 CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
   /usr/include/stdc-predef.h \
@@ -1083,15 +1084,17 @@ CMakeFiles/pix.dir/src/window.o: /home/samio/Pix/src/window.cpp \
   /home/samio/Pix/src/properties.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_image.h \
-  /home/samio/Pix/src/board.h \
   /usr/include/c++/12.2.0/vector \
   /usr/include/c++/12.2.0/bits/stl_uninitialized.h \
   /usr/include/c++/12.2.0/bits/stl_vector.h \
   /usr/include/c++/12.2.0/bits/stl_bvector.h \
-  /usr/include/c++/12.2.0/bits/vector.tcc
+  /usr/include/c++/12.2.0/bits/vector.tcc \
+  /home/samio/Pix/src/board.h
 
 
 /home/samio/Pix/src/window.cpp:
+
+/home/samio/Pix/src/toolBar.h:
 
 /usr/include/c++/12.2.0/bits/vector.tcc:
 
