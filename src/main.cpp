@@ -1,5 +1,6 @@
 #include "window.h"
 #include "board.h"
+#include "toolBar.h"
 
 window *wind = NULL;
 
@@ -13,6 +14,7 @@ int main(){
     grid.bP.board.x = 8;
     grid.bP.board.y = 8;
     grid.bP.cellSize = 64;
+
 
     while(wind->wP.running){
         wind->handleWindowEvent(grid.bP); 

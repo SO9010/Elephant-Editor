@@ -4,9 +4,22 @@
 #include <SDL2/SDL_image.h>
 #include <vector>
 #include <string.h>
+#include <memory>
 
 struct tools{
-    SDL_Color           clickColour = {255, 255, 255, 255};
+    SDL_Cursor*         cursor;
+    SDL_Color           clickColour;
+    SDL_Color           secondaryColour;
+    Uint8               penSize = 1;
+
+    bool                zoomIn = false;
+    bool                zoomOut = false;
+    bool                moveTool = false;
+    bool                squareTool = false;
+    bool                triangelTool = false;
+    bool                circleTool = false;
+    bool                penTool = true;
+    bool                eraserTool = false;
 };
 
 struct canvas{
@@ -16,8 +29,7 @@ struct canvas{
 
 struct boardPorperties{
     canvas              board;
-    tools               tools;
-    std::vector<std::vector<SDL_Color *>> drawArea;    
+    std::vector<std::vector<SDL_Color>> drawArea;    
     int                 cellSize;
     int                 displaceX = 0, displaceY = 0, 
                             fDisplaceX = 0, fDisplaceY = 0;
@@ -26,7 +38,8 @@ struct boardPorperties{
 
 struct windowProperty{
     int                 w, h;                   //Width, hight
-    int                 cW, cH;                 //Center width/hight + offset
+    int                 cWo, cHo;               //Center width/hight + offset
+    int                 cW, cH;               //Center width/hight
     bool                running = false;
     int                 cursorX, cursorY;       //Cursor position x/y
 };
