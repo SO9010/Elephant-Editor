@@ -4,6 +4,7 @@
 #include "../includes/SDL_image.h"
 #include <iostream>
 
+
 #include "properties.h"
 
 class window{
@@ -15,7 +16,7 @@ public:
 
     static SDL_Renderer *rend;
     void                init();
-    void                handleWindowEvent(boardPorperties &bP, tools &tools);
+    void                handleWindowEvent(boardPorperties &bP);
     void                render();
     void                update();
 private: 
@@ -26,5 +27,5 @@ private:
     int                 oX, oY,                     //original X/Y position (of cursor)
                             yF, xF;                 //Y/X final position (of cursor)
     void                updateWP(boardPorperties bP);
-
+    bool                inDrawArea(int x, int y, boardPorperties bP);
 };

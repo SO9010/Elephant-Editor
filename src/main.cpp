@@ -15,13 +15,11 @@ int main(){
     grid.bP.board.y = 8;
     grid.bP.cellSize = 64;
 
-    toolBar toolBar;
 
     while(wind->wP.running){
-        wind->handleWindowEvent(grid.bP, toolBar.tools); 
+        wind->handleWindowEvent(grid.bP); 
         grid.resizeCanvas(originalBoardX, originalBoardY);
         grid.drawGrid(wind->wP);
-        toolBar.renderToolBar(wind->wP);
     }
     return 0;
 }

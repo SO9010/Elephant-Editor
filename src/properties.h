@@ -7,8 +7,19 @@
 #include <memory>
 
 struct tools{
+    SDL_Cursor*         cursor;
     SDL_Color           clickColour;
+    SDL_Color           secondaryColour;
     Uint8               penSize = 1;
+
+    bool                zoomIn = false;
+    bool                zoomOut = false;
+    bool                moveTool = false;
+    bool                squareTool = false;
+    bool                triangelTool = false;
+    bool                circleTool = false;
+    bool                penTool = true;
+    bool                eraserTool = false;
 };
 
 struct canvas{

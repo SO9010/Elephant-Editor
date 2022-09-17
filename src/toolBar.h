@@ -7,13 +7,19 @@ public:
     
     static SDL_Color    primaryColour;
     tools               tools;
-    void                renderToolBar(windowProperty wP);
+    void                renderToolBar(windowProperty wP, boardPorperties bP);
+    void                updateTools();
+    int                 height = 292;
+
+private:
+    void                changeCursor(std::string cursor, int offSet);
+
+    void                zoomIn();
+    void                zoomOut();
+    void                moveTool();
     void                squareTool();
     void                triangelTool();
     void                circleTool();
-    void                moveTool();
     void                penTool();
     void                eraserTool();
-private:
-    int                 height = 277;
 };
