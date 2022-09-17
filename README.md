@@ -1,4 +1,4 @@
-# Pix
+# Elephant Editor
 :warning: VERY EARLY DEVELOPMENT :warning:\
 This is a 2d pixel art editor/creator created using the SDL2 library.
 
