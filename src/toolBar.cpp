@@ -19,6 +19,22 @@ void toolBar::changeCursor(std::string cursor, int offSet){
     SDL_SetCursor(tools.cursor);
     SDL_FreeSurface(surface);
 }
+void toolBar::changeCursor(std::string cursor){
+    SDL_Surface *surface;
+    std::string cursorLocation = "../assets/tools/" + cursor + ".png";
+    surface = IMG_Load(cursorLocation.c_str());
+    tools.cursor = SDL_CreateColorCursor(surface, 0, 0);
+    SDL_SetCursor(tools.cursor);
+    SDL_FreeSurface(surface);
+}
+void toolBar::changeCursor(std::string cursor, int offSetX, int offSetY){
+    SDL_Surface *surface;
+    std::string cursorLocation = "../assets/tools/" + cursor + ".png";
+    surface = IMG_Load(cursorLocation.c_str());
+    tools.cursor = SDL_CreateColorCursor(surface, offSetX, offSetY);
+    SDL_SetCursor(tools.cursor);
+    SDL_FreeSurface(surface);
+}
 
 void toolBar::moveTool(){
     tools.cursor = SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_SIZEALL);
@@ -44,12 +60,11 @@ void toolBar::zoomOut(){
     changeCursor("zoomOut", 8);
 }
 void toolBar::penTool(){
-    tools.cursor = SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_ARROW);
-    SDL_SetCursor(tools.cursor);
+    changeCursor("pencil", 0, 31);
 }
 
 void toolBar::eraserTool(){
-    changeCursor("eraser", 8);
+    changeCursor("eraser", 0, 31);
 }
 
 void toolBar::updateTools(){
@@ -78,7 +93,6 @@ void toolBar::updateTools(){
         this->eraserTool();
     }
 }
-
 void toolBar::renderToolBar(windowProperty wP, boardPorperties bP){
     SDL_Rect dockInner = {4, wP.cH-(height/2)+4, 42, height-8};
     SDL_Rect dockOuter = {0, wP.cH-(height/2), 50, height};

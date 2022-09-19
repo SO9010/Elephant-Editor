@@ -5,7 +5,7 @@
 #include <iostream>
 
 
-#include "properties.h"
+#include "globals.h"
 
 class window{
 public:
@@ -28,4 +28,5 @@ private:
                             yF, xF;                 //Y/X final position (of cursor)
     void                updateWP(boardPorperties bP);
     bool                inDrawArea(int x, int y, boardPorperties bP);
+    bool                inToolBar(int x, int y, boardPorperties bP);
 };

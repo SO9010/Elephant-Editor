@@ -18,7 +18,7 @@ struct tools{
     bool                squareTool = false;
     bool                triangelTool = false;
     bool                circleTool = false;
-    bool                penTool = true;
+    bool                penTool = false;
     bool                eraserTool = false;
 };
 

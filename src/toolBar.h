@@ -13,6 +13,8 @@ public:
 
 private:
     void                changeCursor(std::string cursor, int offSet);
+    void                changeCursor(std::string cursor, int offSetX, int offSetY);
+    void                changeCursor(std::string cursor);
 
     void                zoomIn();
     void                zoomOut();
