@@ -1,13 +1,10 @@
 #include "window.h"
 #include "board.h"
-#include "toolBar.h"
 
 window *wind = NULL;
-
 int main(){
     wind = new window();
     wind->init();
-
     board grid;
     int originalBoardX = 4;
     int originalBoardY = 4;
@@ -18,8 +15,6 @@ int main(){
 
     while(wind->wP.running){
         wind->handleWindowEvent(grid.bP); 
-        grid.resizeCanvas(originalBoardX, originalBoardY);
-        grid.drawGrid(wind->wP);
     }
     return 0;
 }

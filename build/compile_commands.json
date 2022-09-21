@@ -1,22 +1,22 @@
 [
 {
-  "directory": "/home/samio/Pix/build",
-  "command": "/usr/bin/clang++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/board.cpp.o -c /home/samio/Pix/src/board.cpp",
-  "file": "/home/samio/Pix/src/board.cpp"
+  "directory": "/home/samio/Documents/Elephant-Editor/build",
+  "command": "/usr/bin/clang++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/board.cpp.o -c /home/samio/Documents/Elephant-Editor/src/board.cpp",
+  "file": "/home/samio/Documents/Elephant-Editor/src/board.cpp"
 },
 {
-  "directory": "/home/samio/Pix/build",
-  "command": "/usr/bin/clang++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/main.cpp.o -c /home/samio/Pix/src/main.cpp",
-  "file": "/home/samio/Pix/src/main.cpp"
+  "directory": "/home/samio/Documents/Elephant-Editor/build",
+  "command": "/usr/bin/clang++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/main.cpp.o -c /home/samio/Documents/Elephant-Editor/src/main.cpp",
+  "file": "/home/samio/Documents/Elephant-Editor/src/main.cpp"
 },
 {
-  "directory": "/home/samio/Pix/build",
-  "command": "/usr/bin/clang++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/window.cpp.o -c /home/samio/Pix/src/window.cpp",
-  "file": "/home/samio/Pix/src/window.cpp"
+  "directory": "/home/samio/Documents/Elephant-Editor/build",
+  "command": "/usr/bin/clang++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/window.cpp.o -c /home/samio/Documents/Elephant-Editor/src/window.cpp",
+  "file": "/home/samio/Documents/Elephant-Editor/src/window.cpp"
 },
 {
-  "directory": "/home/samio/Pix/build",
-  "command": "/usr/bin/clang++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/toolBar.cpp.o -c /home/samio/Pix/src/toolBar.cpp",
-  "file": "/home/samio/Pix/src/toolBar.cpp"
+  "directory": "/home/samio/Documents/Elephant-Editor/build",
+  "command": "/usr/bin/clang++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/toolBar.cpp.o -c /home/samio/Documents/Elephant-Editor/src/toolBar.cpp",
+  "file": "/home/samio/Documents/Elephant-Editor/src/toolBar.cpp"
 }
 ]
