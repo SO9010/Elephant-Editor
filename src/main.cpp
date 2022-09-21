@@ -1,5 +1,6 @@
 #include "window.h"
 #include "board.h"
+#include "toolBar.h"
 
 window *wind = NULL;
 int main(){
@@ -12,9 +13,14 @@ int main(){
     grid.bP.board.y = 8;
     grid.bP.cellSize = 64;
 
+    toolBar toolBar;
 
     while(wind->wP.running){
-        wind->handleWindowEvent(grid.bP); 
+        wind->handleWindowEvent(grid.bP, toolBar.tools); 
+        grid.resizeCanvas(originalBoardX, originalBoardY);
+        grid.drawGrid(wind->wP);
+        toolBar.renderToolBar(wind->wP, grid.bP);
+        toolBar.updateTools();
     }
     return 0;
 }

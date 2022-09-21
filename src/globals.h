@@ -7,6 +7,7 @@
 #include <memory>
 
 struct tools{
+    int                 toolBarHeight;
     SDL_Cursor*         cursor;
     SDL_Color           clickColour;
     SDL_Color           secondaryColour;

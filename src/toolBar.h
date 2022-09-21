@@ -9,7 +9,6 @@ public:
     tools               tools;
     void                renderToolBar(windowProperty wP, boardPorperties bP);
     void                updateTools();
-    int                 height = 292;
 
 private:
     void                changeCursor(std::string cursor, int offSet);

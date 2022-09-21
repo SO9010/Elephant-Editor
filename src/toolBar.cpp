@@ -5,6 +5,7 @@ SDL_Color toolBar::primaryColour = {255, 255, 255, 255};
 
 toolBar::toolBar(){
     tools.clickColour = primaryColour;
+    tools.toolBarHeight = 292;
 }
 
 toolBar::~toolBar(){
@@ -94,11 +95,11 @@ void toolBar::updateTools(){
     }
 }
 void toolBar::renderToolBar(windowProperty wP, boardPorperties bP){
-    SDL_Rect dockInner = {4, wP.cH-(height/2)+4, 42, height-8};
-    SDL_Rect dockOuter = {0, wP.cH-(height/2), 50, height};
+    SDL_Rect dockInner = {4, wP.cH-(tools.toolBarHeight/2)+4, 42, tools.toolBarHeight-8};
+    SDL_Rect dockOuter = {0, wP.cH-(tools.toolBarHeight/2), 50, tools.toolBarHeight};
 
-    SDL_Rect toolBackDrop = {8, wP.cH-(height/2)-31, 33, 33};
-    SDL_Rect tool = {9, wP.cH-(height/2)-30, 30, 30};
+    SDL_Rect toolBackDrop = {8, wP.cH-(tools.toolBarHeight/2)-31, 33, 33};
+    SDL_Rect tool = {9, wP.cH-(tools.toolBarHeight/2)-30, 30, 30};
     SDL_Texture *tex;
 
     SDL_SetRenderDrawColor(window::rend, 36 ,36, 36, 225);

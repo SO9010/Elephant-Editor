@@ -3,7 +3,6 @@
 #include "toolBar.h"
 
 SDL_Renderer* window::rend = nullptr;
-toolBar toolBar;
 
 window::window(){
     SDL_Init(SDL_INIT_EVERYTHING);
@@ -39,15 +38,15 @@ void window::updateWP(boardPorperties bP){
     wP.cH = (wP.h/2);
 }
 
-void setToolsToFalse(){
-    toolBar.tools.zoomIn = false;
-    toolBar.tools.zoomOut = false;
-    toolBar.tools.moveTool = false;
-    toolBar.tools.squareTool = false;
-    toolBar.tools.triangelTool = false;
-    toolBar.tools.circleTool = false;
-    toolBar.tools.penTool = false;
-    toolBar.tools.eraserTool = false;
+void setToolsToFalse(tools tools){
+    tools.zoomIn = false;
+    tools.zoomOut = false;
+    tools.moveTool = false;
+    tools.squareTool = false;
+    tools.triangelTool = false;
+    tools.circleTool = false;
+    tools.penTool = false;
+    tools.eraserTool = false;
 }
 
 
@@ -61,15 +60,15 @@ bool window::inDrawArea(int x, int y, boardPorperties bP){
     }
 }
 
-bool window::inToolBar(int x, int y, boardPorperties bP){
-    if(x < 50 && (y > wP.cH-(toolBar.height/2) && y < wP.cH+(toolBar.height/2))){
+bool window::inToolBar(int x, int y, boardPorperties bP, tools tools){
+    if(x < 50 && (y > wP.cH-(tools.toolBarHeight/2) && y < wP.cH+(tools.toolBarHeight/2))){
         return true;
     }
     else{
         return false;
     }
 }
-void window::handleWindowEvent(boardPorperties &bP){
+void window::handleWindowEvent(boardPorperties &bP, tools tools){
     if(SDL_WaitEvent(&event)){
         const Uint8 *state = SDL_GetKeyboardState(NULL);
         updateWP(bP);
@@ -95,83 +94,82 @@ void window::handleWindowEvent(boardPorperties &bP){
                     }
                 }
                 else if(state[SDL_SCANCODE_F]){
-                    if(toolBar.tools.zoomIn){
-                        setToolsToFalse();
-                        toolBar.tools.zoomOut = true;
+                    if(tools.zoomIn){
+                        setToolsToFalse(tools);
+                        tools.zoomOut = true;
                     }
-                    else if(!toolBar.tools.zoomIn){
-                        setToolsToFalse();
-                        toolBar.tools.zoomIn = true;
+                    else if(!tools.zoomIn){
+                        setToolsToFalse(tools);
+                        tools.zoomIn = true;
                     }
                 }
                 else if(state[SDL_SCANCODE_M]){
-                    setToolsToFalse();
-                    toolBar.tools.moveTool = true;
+                    setToolsToFalse(tools);
+                    tools.moveTool = true;
                 }
                 else if(state[SDL_SCANCODE_E]){
-                    setToolsToFalse();
-                    toolBar.tools.eraserTool = true;
+                    setToolsToFalse(tools);
+                    tools.eraserTool = true;
                 }
                 else if(state[SDL_SCANCODE_P]){
-                    setToolsToFalse();
-                    toolBar.tools.penTool = true;
+                    setToolsToFalse(tools);
+                    tools.penTool = true;
                 }
                 else if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_C]){
                     SDL_Color tmp = {255,255,255,0};
                     bP.drawArea.clear();
                     bP.drawArea.resize(bP.board.x-2, std::vector<SDL_Color>(bP.board.y-2, tmp));
                 }
-                if(toolBar.tools.zoomIn || toolBar.tools.zoomOut){
+                if(tools.zoomIn || tools.zoomOut){
                     if(state[SDL_SCANCODE_LALT]){
-                        if(toolBar.tools.zoomIn){
-                            setToolsToFalse();
-                            toolBar.tools.zoomOut = true;
+                        if(tools.zoomIn){
+                            setToolsToFalse(tools);
+                            tools.zoomOut = true;
                         }
-                        else if(!toolBar.tools.zoomIn){
-                            setToolsToFalse();
-                            toolBar.tools.zoomIn = true;
+                        else if(!tools.zoomIn){
+                            setToolsToFalse(tools);
+                            tools.zoomIn = true;
                         }
                     }
                 }
-                if(toolBar.tools.penTool){
+                if(tools.penTool){
                     if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_1]){
-                        toolBar.tools.clickColour.r = 255;
-                        toolBar.tools.clickColour.g = 255;
-                        toolBar.tools.clickColour.b = 255;
-                        toolBar.tools.clickColour.a = 255;
+                        tools.clickColour.r = 255;
+                        tools.clickColour.g = 255;
+                        tools.clickColour.b = 255;
+                        tools.clickColour.a = 255;
                     }
                     if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_2]){
-                        toolBar.tools.clickColour.r = 0;
-                        toolBar.tools.clickColour.g = 0;
-                        toolBar.tools.clickColour.b = 0;
-                        toolBar.tools.clickColour.a = 255;                    
+                        tools.clickColour.r = 0;
+                        tools.clickColour.g = 0;
+                        tools.clickColour.b = 0;
+                        tools.clickColour.a = 255;                    
                     }
                     if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_3]){
-                        toolBar.tools.clickColour.r = 255;
-                        toolBar.tools.clickColour.g = 0;
-                        toolBar.tools.clickColour.b = 0;
-                        toolBar.tools.clickColour.a = 255;
+                        tools.clickColour.r = 255;
+                        tools.clickColour.g = 0;
+                        tools.clickColour.b = 0;
+                        tools.clickColour.a = 255;
                     }
                     if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_4]){
-                        toolBar.tools.clickColour.r = 0;
-                        toolBar.tools.clickColour.g = 255;
-                        toolBar.tools.clickColour.b = 0;
-                        toolBar.tools.clickColour.a = 255;
+                        tools.clickColour.r = 0;
+                        tools.clickColour.g = 255;
+                        tools.clickColour.b = 0;
+                        tools.clickColour.a = 255;
                     }
                     if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_5]){
-                        toolBar.tools.clickColour.r = 255;
-                        toolBar.tools.clickColour.g = 0;
-                        toolBar.tools.clickColour.b = 0;
-                        toolBar.tools.clickColour.a = 255;
+                        tools.clickColour.r = 255;
+                        tools.clickColour.g = 0;
+                        tools.clickColour.b = 0;
+                        tools.clickColour.a = 255;
                     }
                     if(state[SDL_SCANCODE_LCTRL] && state[SDL_SCANCODE_6]){
-                        toolBar.tools.clickColour.r = 0;
-                        toolBar.tools.clickColour.g = 255;
-                        toolBar.tools.clickColour.b = 0;
-                        toolBar.tools.clickColour.a = 255;
+                        tools.clickColour.r = 0;
+                        tools.clickColour.g = 255;
+                        tools.clickColour.b = 0;
+                        tools.clickColour.a = 255;
                     }
                 }
-                toolBar.updateTools();
             break;
 
             case SDL_MOUSEWHEEL:
@@ -205,7 +203,7 @@ void window::handleWindowEvent(boardPorperties &bP){
                     }
                 }
                 else if(SDL_GetMouseState(&wP.cursorX, &wP.cursorY) & SDL_BUTTON_LMASK){
-                    if(toolBar.tools.moveTool){
+                    if(tools.moveTool){
                         int dX, dy;
                         if(first){
                             first = false;
@@ -222,8 +220,8 @@ void window::handleWindowEvent(boardPorperties &bP){
                             bP.displaceY = dy + bP.fDisplaceY;
                         }
                     }
-                    if(toolBar.tools.penTool){
-                        if(inDrawArea(wP.cursorX, wP.cursorY, bP) && !inToolBar(wP.cursorX, wP.cursorY, bP)){
+                    if(tools.penTool){
+                        if(inDrawArea(wP.cursorX, wP.cursorY, bP) && !inToolBar(wP.cursorX, wP.cursorY, bP, tools)){
                             int tmp[2] = {0,0};
                             for(int i = 0; i < bP.board.x - 2; i++){
                                 for(int j = 0; j < bP.board.y - 2; j++){
@@ -235,14 +233,14 @@ void window::handleWindowEvent(boardPorperties &bP){
                                     tmp[0] = i + 1;
                                 }
                             }
-                            bP.drawArea[tmp[1]][tmp[0]].r = toolBar.tools.clickColour.r;
-                            bP.drawArea[tmp[1]][tmp[0]].g = toolBar.tools.clickColour.g;
-                            bP.drawArea[tmp[1]][tmp[0]].b = toolBar.tools.clickColour.b;
-                            bP.drawArea[tmp[1]][tmp[0]].a = toolBar.tools.clickColour.a;
+                            bP.drawArea[tmp[1]][tmp[0]].r = tools.clickColour.r;
+                            bP.drawArea[tmp[1]][tmp[0]].g = tools.clickColour.g;
+                            bP.drawArea[tmp[1]][tmp[0]].b = tools.clickColour.b;
+                            bP.drawArea[tmp[1]][tmp[0]].a = tools.clickColour.a;
                         }                       
                     }
-                else if(toolBar.tools.eraserTool){
-                    if(inDrawArea(wP.cursorX, wP.cursorY, bP) && !inToolBar(wP.cursorX, wP.cursorY, bP)){
+                else if(tools.eraserTool){
+                    if(inDrawArea(wP.cursorX, wP.cursorY, bP) && !inToolBar(wP.cursorX, wP.cursorY, bP, tools)){
                         int tmp[2] = {0,0};
                         for(int i = 0; i < bP.board.x - 2; i++){
                             for(int j = 0; j < bP.board.y - 2; j++){
@@ -271,8 +269,8 @@ void window::handleWindowEvent(boardPorperties &bP){
 
         case SDL_MOUSEBUTTONDOWN:
             if(event.button.button == SDL_BUTTON_LEFT){
-                if(toolBar.tools.penTool){
-                    if(inDrawArea(wP.cursorX, wP.cursorY, bP) && !inToolBar(wP.cursorX, wP.cursorY, bP)){
+                if(tools.penTool){
+                    if(inDrawArea(wP.cursorX, wP.cursorY, bP) && !inToolBar(wP.cursorX, wP.cursorY, bP, tools)){
                         int tmp[2] = {0,0};
                         for(int i = 0; i < bP.board.x - 2; i++){
                             for(int j = 0; j < bP.board.y - 2; j++){
@@ -284,15 +282,15 @@ void window::handleWindowEvent(boardPorperties &bP){
                                 tmp[0] = i + 1;
                             }
                         }
-                        bP.drawArea[tmp[1]][tmp[0]].r = toolBar.tools.clickColour.r;
-                        bP.drawArea[tmp[1]][tmp[0]].g = toolBar.tools.clickColour.g;
-                        bP.drawArea[tmp[1]][tmp[0]].b = toolBar.tools.clickColour.b;
-                        bP.drawArea[tmp[1]][tmp[0]].a = toolBar.tools.clickColour.a;
+                        bP.drawArea[tmp[1]][tmp[0]].r = tools.clickColour.r;
+                        bP.drawArea[tmp[1]][tmp[0]].g = tools.clickColour.g;
+                        bP.drawArea[tmp[1]][tmp[0]].b = tools.clickColour.b;
+                        bP.drawArea[tmp[1]][tmp[0]].a = tools.clickColour.a;
                     }  
                     
                 }
-                else if(toolBar.tools.eraserTool){
-                    if(inDrawArea(wP.cursorX, wP.cursorY, bP) && !inToolBar(wP.cursorX, wP.cursorY, bP)){
+                else if(tools.eraserTool){
+                    if(inDrawArea(wP.cursorX, wP.cursorY, bP) && !inToolBar(wP.cursorX, wP.cursorY, bP, tools)){
                         int tmp[2] = {0,0};
                         for(int i = 0; i < bP.board.x - 2; i++){
                             for(int j = 0; j < bP.board.y - 2; j++){
@@ -310,32 +308,32 @@ void window::handleWindowEvent(boardPorperties &bP){
                         bP.drawArea[tmp[1]][tmp[0]].a = 0;
                     }  
                 }
-                else if(toolBar.tools.zoomIn && !inToolBar(wP.cursorX, wP.cursorY, bP)){
+                else if(tools.zoomIn && !inToolBar(wP.cursorX, wP.cursorY, bP, tools)){
                     bP.cellSize += 20;
                 }
-                else if(toolBar.tools.zoomOut && !inToolBar(wP.cursorX, wP.cursorY, bP)){
+                else if(tools.zoomOut && !inToolBar(wP.cursorX, wP.cursorY, bP, tools)){
                     bP.cellSize -= 20;
                 }
 
-                if(inToolBar(wP.cursorX, wP.cursorY, bP)){
+                if(inToolBar(wP.cursorX, wP.cursorY, bP, tools)){
                     int total = 0;
-                    for(int x = wP.cH-(toolBar.height/2); x < wP.cH+(toolBar.height/2); x += 40){
+                    for(int x = wP.cH-(tools.toolBarHeight/2); x < wP.cH+(tools.toolBarHeight/2); x += 40){
                         if(wP.cursorY > x){
                             total++;
                         }
                     }
                     if(total == 1){
-                        setToolsToFalse();
-                        toolBar.tools.moveTool = true;
+                        setToolsToFalse(tools);
+                        tools.moveTool = true;
                     }
                     else if(total == 2){
-                        if(toolBar.tools.zoomIn){
-                            setToolsToFalse();
-                            toolBar.tools.zoomOut = true;
+                        if(tools.zoomIn){
+                            setToolsToFalse(tools);
+                            tools.zoomOut = true;
                         }
-                        else if(!toolBar.tools.zoomIn){
-                            setToolsToFalse();
-                            toolBar.tools.zoomIn = true;
+                        else if(!tools.zoomIn){
+                            setToolsToFalse(tools);
+                            tools.zoomIn = true;
                         }
                     }
                     else if(total == 3){
@@ -348,15 +346,14 @@ void window::handleWindowEvent(boardPorperties &bP){
                         
                     }
                     else if(total == 6){
-                        setToolsToFalse();
-                        toolBar.tools.penTool = true;
+                        setToolsToFalse(tools);
+                        tools.penTool = true;
                     }
                     else if(total == 7){
-                        setToolsToFalse();
-                        toolBar.tools.eraserTool = true;
+                        setToolsToFalse(tools);
+                        tools.eraserTool = true;
                     }
                     std::cout << total << std::endl;
-                    toolBar.updateTools();
                 }
             }
         break;
@@ -368,7 +365,6 @@ void window::handleWindowEvent(boardPorperties &bP){
         break;
         }
     }   
-        toolBar.renderToolBar(wP, bP);
         this->update();
         this->render();
 }
