@@ -1,11 +1,10 @@
 #include "toolBar.h"
-#include "board.h"
 
 SDL_Color toolBar::primaryColour = {255, 255, 255, 255};
 
 toolBar::toolBar(){
-    tools.clickColour = primaryColour;
-    tools.toolBarHeight = 292;
+    toolCollection.clickColour = primaryColour;
+    toolCollection.toolBarHeight = 292;
 }
 
 toolBar::~toolBar(){
@@ -14,32 +13,32 @@ toolBar::~toolBar(){
 
 void toolBar::changeCursor(std::string cursor, int offSet){
     SDL_Surface *surface;
-    std::string cursorLocation = "../assets/tools/" + cursor + ".png";
+    std::string cursorLocation = "../assets/toolCollection/" + cursor + ".png";
     surface = IMG_Load(cursorLocation.c_str());
-    tools.cursor = SDL_CreateColorCursor(surface, offSet, offSet);
-    SDL_SetCursor(tools.cursor);
+    toolCollection.cursor = SDL_CreateColorCursor(surface, offSet, offSet);
+    SDL_SetCursor(toolCollection.cursor);
     SDL_FreeSurface(surface);
 }
 void toolBar::changeCursor(std::string cursor){
     SDL_Surface *surface;
-    std::string cursorLocation = "../assets/tools/" + cursor + ".png";
+    std::string cursorLocation = "../assets/toolCollection/" + cursor + ".png";
     surface = IMG_Load(cursorLocation.c_str());
-    tools.cursor = SDL_CreateColorCursor(surface, 0, 0);
-    SDL_SetCursor(tools.cursor);
+    toolCollection.cursor = SDL_CreateColorCursor(surface, 0, 0);
+    SDL_SetCursor(toolCollection.cursor);
     SDL_FreeSurface(surface);
 }
 void toolBar::changeCursor(std::string cursor, int offSetX, int offSetY){
     SDL_Surface *surface;
-    std::string cursorLocation = "../assets/tools/" + cursor + ".png";
+    std::string cursorLocation = "../assets/toolCollection/" + cursor + ".png";
     surface = IMG_Load(cursorLocation.c_str());
-    tools.cursor = SDL_CreateColorCursor(surface, offSetX, offSetY);
-    SDL_SetCursor(tools.cursor);
+    toolCollection.cursor = SDL_CreateColorCursor(surface, offSetX, offSetY);
+    SDL_SetCursor(toolCollection.cursor);
     SDL_FreeSurface(surface);
 }
 
 void toolBar::moveTool(){
-    tools.cursor = SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_SIZEALL);
-    SDL_SetCursor(tools.cursor);
+    toolCollection.cursor = SDL_CreateSystemCursor(SDL_SYSTEM_CURSOR_SIZEALL);
+    SDL_SetCursor(toolCollection.cursor);
 }
 
 void toolBar::squareTool(){
@@ -69,38 +68,34 @@ void toolBar::eraserTool(){
 }
 
 void toolBar::updateTools(){
-    if(tools.zoomIn){
+    if(toolCollection.zoomIn){
         this->zoomIn();
     }
-    else if(tools.zoomOut){
+    else if(toolCollection.zoomOut){
         this->zoomOut();
     }
-    else if(tools.moveTool){
+    else if(toolCollection.moveTool){
         this->moveTool();
     }
-    else if(tools.squareTool){
+    else if(toolCollection.squareTool){
         this->squareTool();
     }
-    else if(tools.triangelTool){
+    else if(toolCollection.triangelTool){
         this->triangelTool();
     }
-    else if(tools.circleTool){
+    else if(toolCollection.circleTool){
         this->circleTool();
     }
-    else if(tools.penTool){
+    else if(toolCollection.penTool){
         this->penTool();
     }
-    else if(tools.eraserTool){
+    else if(toolCollection.eraserTool){
         this->eraserTool();
     }
 }
 void toolBar::renderToolBar(windowProperty wP, boardPorperties bP){
-    SDL_Rect dockInner = {4, wP.cH-(tools.toolBarHeight/2)+4, 42, tools.toolBarHeight-8};
-    SDL_Rect dockOuter = {0, wP.cH-(tools.toolBarHeight/2), 50, tools.toolBarHeight};
-
-    SDL_Rect toolBackDrop = {8, wP.cH-(tools.toolBarHeight/2)-31, 33, 33};
-    SDL_Rect tool = {9, wP.cH-(tools.toolBarHeight/2)-30, 30, 30};
-    SDL_Texture *tex;
+    SDL_Rect dockInner = {4, wP.cH-(toolCollection.toolBarHeight/2)+4, 42, toolCollection.toolBarHeight-8};
+    SDL_Rect dockOuter = {0, wP.cH-(toolCollection.toolBarHeight/2), 50, toolCollection.toolBarHeight};
 
     SDL_SetRenderDrawColor(window::rend, 36 ,36, 36, 225);
     SDL_RenderFillRect(window::rend, &dockOuter);
@@ -112,11 +107,12 @@ void toolBar::renderToolBar(windowProperty wP, boardPorperties bP){
     /*    Draw tool icons    */
     for(int i = 0; i < 7 ; i++){
         SDL_SetRenderDrawColor(window::rend, 60, 60, 60, 225);
-        toolBackDrop.y += 40;
-        tool.y += 40;
-        std::string ico = "../assets/tools/" + icon[i] + ".png";
-        tex = IMG_LoadTexture(window::rend, ico.c_str());
-        SDL_RenderFillRect(window::rend, &toolBackDrop);
-        SDL_RenderCopy(window::rend, tex, NULL, &tool);
+        std::string ico = "../assets/toolCollection/" + icon[i] + ".png";
+        button tool;
+        tool.buttonHeight = tool.buttonWidth = 34;
+        //tool.buttonImage = ico;
+        tool.buttonY = wP.cH-(toolCollection.toolBarHeight/2) + 9 + i * 40;
+        tool.buttonX = 8;
+        tool.showButton();
     }
 }

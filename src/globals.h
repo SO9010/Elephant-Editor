@@ -6,6 +6,7 @@
 #include <string.h>
 #include <memory>
 
+
 struct tools{
     int                 toolBarHeight;
     SDL_Cursor*         cursor;
@@ -19,7 +20,7 @@ struct tools{
     bool                squareTool = false;
     bool                triangelTool = false;
     bool                circleTool = false;
-    bool                penTool = false;
+    bool                penTool = true;
     bool                eraserTool = false;
 };
 

@@ -4,7 +4,6 @@
 #include "../includes/SDL_image.h"
 #include <iostream>
 
-
 #include "globals.h"
 
 class window{
@@ -13,7 +12,6 @@ public:
                         ~window();
 
     windowProperty      wP;
-
     static SDL_Renderer *rend;
     void                init();
     void                handleWindowEvent(boardPorperties &bP, tools tools);

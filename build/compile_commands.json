@@ -1,22 +1,27 @@
 [
 {
-  "directory": "/home/samio/Documents/Elephant-Editor/build",
-  "command": "/usr/bin/clang++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/board.cpp.o -c /home/samio/Documents/Elephant-Editor/src/board.cpp",
-  "file": "/home/samio/Documents/Elephant-Editor/src/board.cpp"
+  "directory": "/home/samio/Elephant-Editor/build",
+  "command": "/usr/bin/g++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/board.cpp.o -c /home/samio/Elephant-Editor/src/board.cpp",
+  "file": "/home/samio/Elephant-Editor/src/board.cpp"
 },
 {
-  "directory": "/home/samio/Documents/Elephant-Editor/build",
-  "command": "/usr/bin/clang++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/main.cpp.o -c /home/samio/Documents/Elephant-Editor/src/main.cpp",
-  "file": "/home/samio/Documents/Elephant-Editor/src/main.cpp"
+  "directory": "/home/samio/Elephant-Editor/build",
+  "command": "/usr/bin/g++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/main.cpp.o -c /home/samio/Elephant-Editor/src/main.cpp",
+  "file": "/home/samio/Elephant-Editor/src/main.cpp"
 },
 {
-  "directory": "/home/samio/Documents/Elephant-Editor/build",
-  "command": "/usr/bin/clang++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/window.cpp.o -c /home/samio/Documents/Elephant-Editor/src/window.cpp",
-  "file": "/home/samio/Documents/Elephant-Editor/src/window.cpp"
+  "directory": "/home/samio/Elephant-Editor/build",
+  "command": "/usr/bin/g++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/window.cpp.o -c /home/samio/Elephant-Editor/src/window.cpp",
+  "file": "/home/samio/Elephant-Editor/src/window.cpp"
 },
 {
-  "directory": "/home/samio/Documents/Elephant-Editor/build",
-  "command": "/usr/bin/clang++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/toolBar.cpp.o -c /home/samio/Documents/Elephant-Editor/src/toolBar.cpp",
-  "file": "/home/samio/Documents/Elephant-Editor/src/toolBar.cpp"
+  "directory": "/home/samio/Elephant-Editor/build",
+  "command": "/usr/bin/g++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/ui/button.cpp.o -c /home/samio/Elephant-Editor/src/ui/button.cpp",
+  "file": "/home/samio/Elephant-Editor/src/ui/button.cpp"
+},
+{
+  "directory": "/home/samio/Elephant-Editor/build",
+  "command": "/usr/bin/g++ -I/src -I/includes -g -o CMakeFiles/pix.dir/src/widgets/toolBar.cpp.o -c /home/samio/Elephant-Editor/src/widgets/toolBar.cpp",
+  "file": "/home/samio/Elephant-Editor/src/widgets/toolBar.cpp"
 }
 ]
