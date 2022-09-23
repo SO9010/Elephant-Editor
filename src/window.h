@@ -13,8 +13,9 @@ public:
 
     windowProperty      wP;
     static SDL_Renderer *rend;
+    
     void                init();
-    void                handleWindowEvent(boardPorperties &bP, tools tools);
+    void                handleWindowEvent(boardPorperties &bP, tools &tools);
     void                render();
     void                update();
 private: 

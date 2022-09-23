@@ -10,19 +10,10 @@ public:
     tools               toolCollection;
     void                renderToolBar(windowProperty wP, boardPorperties bP);
     void                updateTools();
-    button tool;
 
 private:
+    void handlePresses(windowProperty wP, std::vector<button> toolIconRender);
     void                changeCursor(std::string cursor, int offSet);
     void                changeCursor(std::string cursor, int offSetX, int offSetY);
     void                changeCursor(std::string cursor);
-
-    void                zoomIn();
-    void                zoomOut();
-    void                moveTool();
-    void                squareTool();
-    void                triangelTool();
-    void                circleTool();
-    void                penTool();
-    void                eraserTool();
 };

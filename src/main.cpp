@@ -20,7 +20,6 @@ int main(){
         grid.resizeCanvas(originalBoardX, originalBoardY);
         grid.drawGrid(wind->wP);
         toolBar.renderToolBar(wind->wP, grid.bP);
-        toolBar.updateTools();
     }
     return 0;
 }

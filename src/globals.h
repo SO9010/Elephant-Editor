@@ -39,6 +39,8 @@ struct boardPorperties{
 };
 
 struct windowProperty{
+    const Uint8 *state = SDL_GetKeyboardState(NULL);
+    bool                leftClick = false;
     int                 w, h;                   //Width, hight
     int                 cWo, cHo;               //Center width/hight + offset
     int                 cW, cH;               //Center width/hight

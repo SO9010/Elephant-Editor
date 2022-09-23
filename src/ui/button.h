@@ -15,7 +15,12 @@ public:
     int buttonWidth, buttonHeight;
     SDL_Color activeColour, passiveColour;
     bool active;
+    int type;                               // 0 = normal, 1 = checkbox
 private:
     SDL_Rect buttonProperties;
     SDL_Texture *buttonImageTexture = NULL;
+};
+
+class toggleButton : button{
+
 };
