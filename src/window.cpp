@@ -334,8 +334,8 @@ void window::handleWindowEvent(boardPorperties &bP, tools &toolCollection){
         break;
         }
     }   
-        this->update();
-        this->render();
+    this->update();
+    this->render();
 }
 
 void window::render(){

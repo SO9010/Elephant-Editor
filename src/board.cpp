@@ -7,15 +7,6 @@ board::~board(){
 
 }
 
-void board::drawGhostCursor(windowProperty wP){
-        SDL_Rect            ghostCursor = {0, 0, bP.cellSize,
-                                             bP.cellSize}; 
-        ghostCursor.x = ((wP.cursorX / bP.cellSize) * bP.cellSize);
-        ghostCursor.y = ((wP.cursorY / bP.cellSize) * bP.cellSize);
-        SDL_SetRenderDrawColor(window::rend, 33, 33, 33, 255);
-        SDL_RenderFillRect(window::rend, &ghostCursor);
-}
-
 
 void board::resizeCanvas(int &originalBoardX, int &originalBoardY){
     if(originalBoardX != bP.board.x -2 || originalBoardY != bP.board.y -2){
