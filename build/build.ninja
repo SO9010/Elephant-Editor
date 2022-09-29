@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: Pix
+# Project: Elephant-Editor
 # Configurations: Debug
 # =============================================================================
 
@@ -41,65 +41,72 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/samio/Elephant-Editor/build/
 # =============================================================================
-# Object build statements for EXECUTABLE target pix
+# Object build statements for EXECUTABLE target Elephant-Editor
 
 
 #############################################
-# Order-only phony target for pix
+# Order-only phony target for Elephant-Editor
 
-build cmake_object_order_depends_target_pix: phony || CMakeFiles/pix.dir
+build cmake_object_order_depends_target_Elephant-Editor: phony || CMakeFiles/Elephant-Editor.dir
 
-build CMakeFiles/pix.dir/src/board.cpp.o: CXX_COMPILER__pix_Debug /home/samio/Elephant-Editor/src/board.cpp || cmake_object_order_depends_target_pix
-  DEP_FILE = CMakeFiles/pix.dir/src/board.cpp.o.d
+build CMakeFiles/Elephant-Editor.dir/src/board.cpp.o: CXX_COMPILER__Elephant-Editor_Debug /home/samio/Elephant-Editor/src/board.cpp || cmake_object_order_depends_target_Elephant-Editor
+  DEP_FILE = CMakeFiles/Elephant-Editor.dir/src/board.cpp.o.d
   FLAGS = -g
   INCLUDES = -I/src -I/includes
-  OBJECT_DIR = CMakeFiles/pix.dir
-  OBJECT_FILE_DIR = CMakeFiles/pix.dir/src
+  OBJECT_DIR = CMakeFiles/Elephant-Editor.dir
+  OBJECT_FILE_DIR = CMakeFiles/Elephant-Editor.dir/src
 
-build CMakeFiles/pix.dir/src/main.cpp.o: CXX_COMPILER__pix_Debug /home/samio/Elephant-Editor/src/main.cpp || cmake_object_order_depends_target_pix
-  DEP_FILE = CMakeFiles/pix.dir/src/main.cpp.o.d
+build CMakeFiles/Elephant-Editor.dir/src/main.cpp.o: CXX_COMPILER__Elephant-Editor_Debug /home/samio/Elephant-Editor/src/main.cpp || cmake_object_order_depends_target_Elephant-Editor
+  DEP_FILE = CMakeFiles/Elephant-Editor.dir/src/main.cpp.o.d
   FLAGS = -g
   INCLUDES = -I/src -I/includes
-  OBJECT_DIR = CMakeFiles/pix.dir
-  OBJECT_FILE_DIR = CMakeFiles/pix.dir/src
+  OBJECT_DIR = CMakeFiles/Elephant-Editor.dir
+  OBJECT_FILE_DIR = CMakeFiles/Elephant-Editor.dir/src
 
-build CMakeFiles/pix.dir/src/window.cpp.o: CXX_COMPILER__pix_Debug /home/samio/Elephant-Editor/src/window.cpp || cmake_object_order_depends_target_pix
-  DEP_FILE = CMakeFiles/pix.dir/src/window.cpp.o.d
+build CMakeFiles/Elephant-Editor.dir/src/window.cpp.o: CXX_COMPILER__Elephant-Editor_Debug /home/samio/Elephant-Editor/src/window.cpp || cmake_object_order_depends_target_Elephant-Editor
+  DEP_FILE = CMakeFiles/Elephant-Editor.dir/src/window.cpp.o.d
   FLAGS = -g
   INCLUDES = -I/src -I/includes
-  OBJECT_DIR = CMakeFiles/pix.dir
-  OBJECT_FILE_DIR = CMakeFiles/pix.dir/src
+  OBJECT_DIR = CMakeFiles/Elephant-Editor.dir
+  OBJECT_FILE_DIR = CMakeFiles/Elephant-Editor.dir/src
 
-build CMakeFiles/pix.dir/src/ui/button.cpp.o: CXX_COMPILER__pix_Debug /home/samio/Elephant-Editor/src/ui/button.cpp || cmake_object_order_depends_target_pix
-  DEP_FILE = CMakeFiles/pix.dir/src/ui/button.cpp.o.d
+build CMakeFiles/Elephant-Editor.dir/src/ui/button.cpp.o: CXX_COMPILER__Elephant-Editor_Debug /home/samio/Elephant-Editor/src/ui/button.cpp || cmake_object_order_depends_target_Elephant-Editor
+  DEP_FILE = CMakeFiles/Elephant-Editor.dir/src/ui/button.cpp.o.d
   FLAGS = -g
   INCLUDES = -I/src -I/includes
-  OBJECT_DIR = CMakeFiles/pix.dir
-  OBJECT_FILE_DIR = CMakeFiles/pix.dir/src/ui
+  OBJECT_DIR = CMakeFiles/Elephant-Editor.dir
+  OBJECT_FILE_DIR = CMakeFiles/Elephant-Editor.dir/src/ui
 
-build CMakeFiles/pix.dir/src/widgets/toolBar.cpp.o: CXX_COMPILER__pix_Debug /home/samio/Elephant-Editor/src/widgets/toolBar.cpp || cmake_object_order_depends_target_pix
-  DEP_FILE = CMakeFiles/pix.dir/src/widgets/toolBar.cpp.o.d
+build CMakeFiles/Elephant-Editor.dir/src/ui/container.cpp.o: CXX_COMPILER__Elephant-Editor_Debug /home/samio/Elephant-Editor/src/ui/container.cpp || cmake_object_order_depends_target_Elephant-Editor
+  DEP_FILE = CMakeFiles/Elephant-Editor.dir/src/ui/container.cpp.o.d
   FLAGS = -g
   INCLUDES = -I/src -I/includes
-  OBJECT_DIR = CMakeFiles/pix.dir
-  OBJECT_FILE_DIR = CMakeFiles/pix.dir/src/widgets
+  OBJECT_DIR = CMakeFiles/Elephant-Editor.dir
+  OBJECT_FILE_DIR = CMakeFiles/Elephant-Editor.dir/src/ui
+
+build CMakeFiles/Elephant-Editor.dir/src/widgets/toolBar.cpp.o: CXX_COMPILER__Elephant-Editor_Debug /home/samio/Elephant-Editor/src/widgets/toolBar.cpp || cmake_object_order_depends_target_Elephant-Editor
+  DEP_FILE = CMakeFiles/Elephant-Editor.dir/src/widgets/toolBar.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/src -I/includes
+  OBJECT_DIR = CMakeFiles/Elephant-Editor.dir
+  OBJECT_FILE_DIR = CMakeFiles/Elephant-Editor.dir/src/widgets
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target pix
+# Link build statements for EXECUTABLE target Elephant-Editor
 
 
 #############################################
-# Link the executable pix
+# Link the executable Elephant-Editor
 
-build pix: CXX_EXECUTABLE_LINKER__pix_Debug CMakeFiles/pix.dir/src/board.cpp.o CMakeFiles/pix.dir/src/main.cpp.o CMakeFiles/pix.dir/src/window.cpp.o CMakeFiles/pix.dir/src/ui/button.cpp.o CMakeFiles/pix.dir/src/widgets/toolBar.cpp.o
+build Elephant-Editor: CXX_EXECUTABLE_LINKER__Elephant-Editor_Debug CMakeFiles/Elephant-Editor.dir/src/board.cpp.o CMakeFiles/Elephant-Editor.dir/src/main.cpp.o CMakeFiles/Elephant-Editor.dir/src/window.cpp.o CMakeFiles/Elephant-Editor.dir/src/ui/button.cpp.o CMakeFiles/Elephant-Editor.dir/src/ui/container.cpp.o CMakeFiles/Elephant-Editor.dir/src/widgets/toolBar.cpp.o
   FLAGS = -g
   LINK_FLAGS = -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf -lstdc++
-  OBJECT_DIR = CMakeFiles/pix.dir
+  OBJECT_DIR = CMakeFiles/Elephant-Editor.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = pix
-  TARGET_PDB = pix.dbg
+  TARGET_FILE = Elephant-Editor
+  TARGET_PDB = Elephant-Editor.dbg
 
 
 #############################################
@@ -136,7 +143,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/samio/Elephant-Editor/build
 
-build all: phony pix
+build all: phony Elephant-Editor
 
 # =============================================================================
 # Built-in targets
@@ -145,14 +152,14 @@ build all: phony pix
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/samio/Elephant-Editor/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.1/CMakeCCompiler.cmake CMakeFiles/3.24.1/CMakeCXXCompiler.cmake CMakeFiles/3.24.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/samio/Elephant-Editor/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.1/CMakeCCompiler.cmake CMakeFiles/3.24.1/CMakeCXXCompiler.cmake CMakeFiles/3.24.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/samio/Elephant-Editor/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/Clang-C.cmake /usr/share/cmake/Modules/Compiler/Clang-CXX.cmake /usr/share/cmake/Modules/Compiler/Clang.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-C.cmake /usr/share/cmake/Modules/Platform/Linux-Clang-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.1/CMakeCCompiler.cmake CMakeFiles/3.24.1/CMakeCXXCompiler.cmake CMakeFiles/3.24.1/CMakeSystem.cmake: phony
+build /home/samio/Elephant-Editor/CMakeLists.txt /usr/share/cmake/Modules/CMakeCInformation.cmake /usr/share/cmake/Modules/CMakeCXXInformation.cmake /usr/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake/Modules/CMakeGenericSystem.cmake /usr/share/cmake/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake/Modules/CMakeLanguageInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake/Modules/Compiler/GNU-C.cmake /usr/share/cmake/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake/Modules/Compiler/GNU.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake/Modules/Platform/Linux-GNU.cmake /usr/share/cmake/Modules/Platform/Linux.cmake /usr/share/cmake/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.1/CMakeCCompiler.cmake CMakeFiles/3.24.1/CMakeCXXCompiler.cmake CMakeFiles/3.24.1/CMakeSystem.cmake: phony
 
 
 #############################################

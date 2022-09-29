@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "pix"
+			"path" : "Elephant-Editor"
 		}
 	],
 	"backtrace" : 1,
@@ -70,11 +70,12 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		}
 	],
-	"id" : "pix::@6890427a1f51a3e7e1df",
+	"id" : "Elephant-Editor::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -115,8 +116,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "pix",
-	"nameOnDisk" : "pix",
+	"name" : "Elephant-Editor",
+	"nameOnDisk" : "Elephant-Editor",
 	"paths" : 
 	{
 		"build" : ".",
@@ -132,7 +133,8 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		}
 	],
@@ -160,6 +162,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/ui/button.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ui/container.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

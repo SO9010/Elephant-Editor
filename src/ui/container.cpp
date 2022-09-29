@@ -11,13 +11,22 @@ container::~container(){
 }
 
 void container::addToContainer(int uiElementW, int uiElementH){
-    sizeOfUiElements[0] += 0;
+    sizeOfUiElementsW += uiElementW + gapX;
+    sizeOfUiElementsH += uiElementH + gapY;
+    dockOuter.h = sizeOfUiElementsH;
+    dockOuter.w = sizeOfUiElementsW;
 }
 
-void container::addToContainer(int uiElementW){
-    
+void container::addToContainerW(int uiElementW){
+    sizeOfUiElementsW += uiElementW + gapX;
 }
 
-void container::addToContainer(int uiElementH){
-    
+void container::addToContainerH(int uiElementH){
+    sizeOfUiElementsH += uiElementH + gapY;
+}
+
+void container::renderContainer(){
+    SDL_SetRenderDrawBlendMode(window::rend, SDL_BLENDMODE_BLEND);
+    SDL_SetRenderDrawColor(window::rend, 36 ,36, 36, 225);
+    SDL_RenderFillRect(window::rend, &dockOuter);
 }

@@ -48,16 +48,8 @@ void changeClicked(tools &toolCollection){
 }
 
 void toolBar::renderToolBar(windowProperty wP, boardPorperties bP){
-    SDL_Rect dockInner = {4, wP.cH-(toolCollection.toolBarHeight/2)+4, 42, toolCollection.toolBarHeight-8};
-    SDL_Rect dockOuter = {0, wP.cH-(toolCollection.toolBarHeight/2), 50, toolCollection.toolBarHeight};
-
-    SDL_SetRenderDrawColor(window::rend, 36 ,36, 36, 225);
-    SDL_RenderFillRect(window::rend, &dockOuter);
-
-    SDL_SetRenderDrawColor(window::rend, 48, 48, 48, 225);
-    SDL_RenderFillRect(window::rend, &dockInner);
-
-
+    container container;
+    container.y = wP.cH-(toolCollection.toolBarHeight/2);
 
     button moveButton;
     moveButton.buttonHeight = 34;
@@ -77,6 +69,7 @@ void toolBar::renderToolBar(windowProperty wP, boardPorperties bP){
     else{
         moveButton.active = false;
     }
+    container.addToContainer(moveButton.buttonWidth, moveButton.buttonHeight);
     moveButton.showButton();
 
     button zoomButton;
@@ -100,6 +93,7 @@ void toolBar::renderToolBar(windowProperty wP, boardPorperties bP){
     else{
         zoomButton.active = false;
     }
+    container.addToContainer(zoomButton.buttonWidth, zoomButton.buttonHeight);
     zoomButton.showButton();
     
     button squareButton;
@@ -194,6 +188,4 @@ void toolBar::renderToolBar(windowProperty wP, boardPorperties bP){
         eraserButton.active = false;
     }
     eraserButton.showButton();
-
-   // handlePresses(wP, toolIconRender);
 }
