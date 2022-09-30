@@ -2,6 +2,7 @@
 //it will dynamically change to the size of contents and can be resized by user
 #include "../globals.h"
 #include "../window.h"
+#include "button.h"
 
 class container{
 public:
@@ -14,12 +15,13 @@ public:
     int minimumWidth;                                       //Well, its the minimum width you can resize it to.
     bool hidden;
     int x = 0, y = 0;
-    int gapX, gapY;                                         //This gives the gaps inbetween the elements
+    int gapX = 0, gapY = 0;                                         //This gives the gaps inbetween the elements
     void addToContainer(int uiElementW, int uiElementH);    //Add to container, this takes in the width and height of the items.
     void addToContainerH(int uiElementH);
     void addToContainerW(int uiElementW);
     SDL_Rect dockInner = {0,0,0,0}, dockOuter = {0,0,0,0};
     void renderContainer();
+    void handleResize(windowProperty wP);
 private:
     void renderResizeTag();
     int sizeOfUiElementsW = 0;

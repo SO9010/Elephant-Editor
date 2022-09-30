@@ -37,20 +37,22 @@ void toolBar::changeCursor(std::string cursor, int offSetX, int offSetY){
 }
 
 void changeClicked(tools &toolCollection){
-        toolCollection.zoomIn = false;
-        toolCollection.zoomOut = false;
-        toolCollection.squareTool = false;
-        toolCollection.triangelTool = false;
-        toolCollection.circleTool = false;
-        toolCollection.penTool = false;
-        toolCollection.eraserTool = false;
-        toolCollection.moveTool = false;
+    toolCollection.zoomIn = false;
+    toolCollection.zoomOut = false;
+    toolCollection.squareTool = false;
+    toolCollection.triangelTool = false;
+    toolCollection.circleTool = false;
+    toolCollection.penTool = false;
+    toolCollection.eraserTool = false;
+    toolCollection.moveTool = false;
 }
 
 void toolBar::renderToolBar(windowProperty wP, boardPorperties bP){
     container container;
     container.y = wP.cH-(toolCollection.toolBarHeight/2);
-
+    container.addToContainer(48, 34 * 7 + 8 * 7 - 2);
+    container.renderContainer();
+    
     button moveButton;
     moveButton.buttonHeight = 34;
     moveButton.buttonWidth = 34;
@@ -69,7 +71,6 @@ void toolBar::renderToolBar(windowProperty wP, boardPorperties bP){
     else{
         moveButton.active = false;
     }
-    container.addToContainer(moveButton.buttonWidth, moveButton.buttonHeight);
     moveButton.showButton();
 
     button zoomButton;
@@ -188,4 +189,5 @@ void toolBar::renderToolBar(windowProperty wP, boardPorperties bP){
         eraserButton.active = false;
     }
     eraserButton.showButton();
+    
 }
