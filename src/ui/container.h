@@ -1,8 +1,8 @@
+#pragma once
+
 // This is a container for UI elements such as toolbars, 
 //it will dynamically change to the size of contents and can be resized by user
-#include "../globals.h"
-#include "../window.h"
-#include "button.h"
+#include "includes.h"
 
 class container{
 public:

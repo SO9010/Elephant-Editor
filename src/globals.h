@@ -6,7 +6,6 @@
 #include <string.h>
 #include <memory>
 
-
 struct tools{
     int                 toolBarHeight;
     SDL_Cursor*         cursor;
@@ -43,7 +42,7 @@ struct windowProperty{
     bool                leftClick = false;
     int                 w, h;                   //Width, hight
     int                 cWo, cHo;               //Center width/hight + offset
-    int                 cW, cH;               //Center width/hight
+    int                 cW, cH;                 //Center width/hight
     bool                running = false;
     int                 cursorX, cursorY;       //Cursor position x/y
 };

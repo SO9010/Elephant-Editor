@@ -27,6 +27,10 @@ void window::init(){
     Uint32 flags = SDL_WINDOW_SHOWN | SDL_WINDOW_RESIZABLE | SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
     SDL_CreateWindowAndRenderer(wP.w, wP.h, flags, &wind, &rend);
     SDL_SetWindowTitle(wind, "Elephant Editor");
+    SDL_Surface *iconSurface;
+    iconSurface = SDL_LoadBMP("../assets/icon.png");
+    SDL_FreeSurface(iconSurface);
+    SDL_SetWindowIcon(wind, iconSurface);
     SDL_SetRenderDrawBlendMode(rend, SDL_BLENDMODE_BLEND);
     SDL_SetWindowMinimumSize(wind, 320, 240);
 }
@@ -92,6 +96,28 @@ void window::handleWindowEvent(boardPorperties &bP, tools &toolCollection){
                     if(bP.board.y > 4){
                         bP.board.y -= 2;
                     }
+                }
+                else if(wP.state[SDL_SCANCODE_C]){
+                    setToolsToFalse(toolCollection);
+                    if(inDrawArea(wP.cursorX, wP.cursorY, bP) && !inToolBar(wP.cursorX, wP.cursorY, bP, toolCollection)){
+                        int tmp[2] = {0,0};
+                        for(int i = 0; i < bP.board.x - 2; i++){
+                            for(int j = 0; j < bP.board.y - 2; j++){
+                                if((wP.cursorY - (bP.gridY+(3*bP.cellSize)) - 1) > (bP.cellSize * j)){
+                                    tmp[1] = j + 1;
+                                } 
+                            }
+                            if((wP.cursorX - (bP.gridX+(3*bP.cellSize)) - 1) > (bP.cellSize * i)){
+                                tmp[0] = i + 1;
+                            }
+                        }
+                        if(toolCollection.clickColour.a > 0){
+                            toolCollection.clickColour.r = bP.drawArea[tmp[1]][tmp[0]].r;
+                            toolCollection.clickColour.g = bP.drawArea[tmp[1]][tmp[0]].g;
+                            toolCollection.clickColour.b = bP.drawArea[tmp[1]][tmp[0]].b;
+                            toolCollection.clickColour.a = bP.drawArea[tmp[1]][tmp[0]].a;
+                        }
+                    }   
                 }
                 else if(wP.state[SDL_SCANCODE_F]){
                     if(toolCollection.zoomIn){

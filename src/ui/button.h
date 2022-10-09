@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "../globals.h"
+#include "includes.h"
 
 class button{
 public:

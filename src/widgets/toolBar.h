@@ -1,5 +1,6 @@
-#include "../window.h"
-#include "../ui/container.h"
+#pragma once
+
+#include "includes.h"
 
 class toolBar{
 public:

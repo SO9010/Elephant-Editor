@@ -3,7 +3,11 @@
 
 class colourPicker{
 public:
-
-private:
+    colourPicker();
+    ~colourPicker();
+    void renderColourPicker();
+    void renderColourPickerDot();
     SDL_Color getPixelColour();
+    int w, h;
+private:
 };

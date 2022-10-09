@@ -1,5 +1,4 @@
 #include "button.h"
-#include "../window.h"
 
 button::button() : buttonX(0), buttonY(0), buttonWidth(0), buttonHeight(0), passiveColour{60, 60, 60, 225}, activeColour{100, 100, 100, 140}{
 
