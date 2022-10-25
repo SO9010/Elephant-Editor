@@ -9,7 +9,7 @@
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.24"
+						"string" : "3.23"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Elephant-Editor::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Elephant-Editor-Debug-894f25fc150b8d709f4d.json",
+					"jsonFile" : "target-Elephant-Editor-Debug-b0cdc0c8cb767d872c1a.json",
 					"name" : "Elephant-Editor",
 					"projectIndex" : 0
 				}
@@ -49,7 +49,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/samio/Elephant-Editor/build",
+		"build" : "/home/samio/Elephant-Editor/cmake-build-debug",
 		"source" : "/home/samio/Elephant-Editor"
 	},
 	"version" : 

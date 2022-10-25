@@ -44,15 +44,9 @@ void button::showButton(){
     }
 }
 bool button::clicked(windowProperty wP){
-    
-    if(wP.cursorY > buttonY && wP.leftClick){
-        if(wP.cursorY < (buttonY + buttonHeight)){
-            if(wP.cursorX > buttonX){
-                if(wP.cursorX < (buttonX + buttonWidth)){
-                    return true;
-                }
-            }
-        }
+    if(wP.cursorX > buttonX && wP.leftClick && wP.cursorX < buttonX + buttonWidth &&
+            wP.cursorY > buttonY && wP.cursorY < buttonY + buttonHeight){
+        return true;
     }
     return false;
 }

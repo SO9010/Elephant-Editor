@@ -1,7 +1,6 @@
 #pragma once
 
-#include "../includes/SDL.h"
-#include "../includes/SDL_image.h"
+
 #include <iostream>
 
 #include "globals.h"

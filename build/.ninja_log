@@ -1,9 +1,10 @@
 # ninja log v5
-1	656	1665330408713486829	CMakeFiles/Elephant-Editor.dir/src/ui/container.cpp.o	e6fd2abced740e38
-432	485	1665330511573753824	Elephant-Editor	eef5bab6bf7224d7
-1	653	1665330408706820146	CMakeFiles/Elephant-Editor.dir/src/ui/button.cpp.o	71321475df7c03ee
-1	451	1665330481590342788	CMakeFiles/Elephant-Editor.dir/src/widgets/toolBar.cpp.o	3aa29524964fa35b
-1	471	1665330481610342839	CMakeFiles/Elephant-Editor.dir/src/main.cpp.o	3c98dd690ec69c
-1	598	1665321579945747497	CMakeFiles/Elephant-Editor.dir/src/board.cpp.o	866ac60c27616a65
-1	510	1665330481647009601	CMakeFiles/Elephant-Editor.dir/src/window.cpp.o	c84a66fcf0baee94
-0	432	1665330511520420352	CMakeFiles/Elephant-Editor.dir/src/widgets/colourPicker.cpp.o	6c076e1f71a991c4
+1	17	1666710979306122321	build.ninja	14d11c9a60883369
+1	743	1666471551246105497	CMakeFiles/Elephant-Editor.dir/src/widgets/colourPicker.cpp.o	3b395219d87b0002
+0	778	1666452546028957447	CMakeFiles/Elephant-Editor.dir/src/window.cpp.o	82ebaa8a7c379df0
+1	1097	1666205024764126459	CMakeFiles/Elephant-Editor.dir/src/board.cpp.o	7e42014a38668393
+1	698	1666453681407637993	CMakeFiles/Elephant-Editor.dir/src/main.cpp.o	1e4f1714089eb442
+1	797	1666205024464133678	CMakeFiles/Elephant-Editor.dir/src/widgets/toolBar.cpp.o	ff1ef8c21564227c
+1	652	1666446544164434749	CMakeFiles/Elephant-Editor.dir/src/ui/button.cpp.o	9df1210b3ad8fc3b
+743	811	1666471551310115998	Elephant-Editor	ba4862e37be90d9a
+1	785	1666205024452133968	CMakeFiles/Elephant-Editor.dir/src/ui/container.cpp.o	293e3ce0d74a9c7d

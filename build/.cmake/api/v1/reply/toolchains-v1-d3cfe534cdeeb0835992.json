@@ -5,21 +5,24 @@
 		{
 			"compiler" : 
 			{
-				"id" : "Clang",
+				"id" : "GNU",
 				"implicit" : 
 				{
 					"includeDirectories" : 
 					[
-						"/usr/lib/clang/14.0.6/include",
-						"/usr/local/include",
+						"/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/include",
+						"/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/include-fixed",
+						"/usr/include/x86_64-linux-gnu",
 						"/usr/include"
 					],
 					"linkDirectories" : 
 					[
-						"/usr/lib64/gcc/x86_64-pc-linux-gnu/12.2.0",
+						"/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0",
+						"/usr/lib/x86_64-linux-gnu",
 						"/usr/lib64",
+						"/lib/x86_64-linux-gnu",
 						"/lib64",
-						"/lib",
+						"/usr/x86_64-unknown-linux-gnu/lib",
 						"/usr/lib"
 					],
 					"linkFrameworkDirectories" : [],
@@ -32,8 +35,8 @@
 						"gcc_s"
 					]
 				},
-				"path" : "/usr/bin/clang",
-				"version" : "14.0.6"
+				"path" : "/usr/bin/gcc",
+				"version" : "12.1.0"
 			},
 			"language" : "C",
 			"sourceFileExtensions" : 
@@ -45,24 +48,27 @@
 		{
 			"compiler" : 
 			{
-				"id" : "Clang",
+				"id" : "GNU",
 				"implicit" : 
 				{
 					"includeDirectories" : 
 					[
-						"/usr/include/c++/12.2.0",
-						"/usr/include/c++/12.2.0/x86_64-pc-linux-gnu",
-						"/usr/include/c++/12.2.0/backward",
-						"/usr/lib/clang/14.0.6/include",
-						"/usr/local/include",
+						"/usr/include/c++/12.1.0",
+						"/usr/include/c++/12.1.0/x86_64-unknown-linux-gnu",
+						"/usr/include/c++/12.1.0/backward",
+						"/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/include",
+						"/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/include-fixed",
+						"/usr/include/x86_64-linux-gnu",
 						"/usr/include"
 					],
 					"linkDirectories" : 
 					[
-						"/usr/lib64/gcc/x86_64-pc-linux-gnu/12.2.0",
+						"/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0",
+						"/usr/lib/x86_64-linux-gnu",
 						"/usr/lib64",
+						"/lib/x86_64-linux-gnu",
 						"/lib64",
-						"/lib",
+						"/usr/x86_64-unknown-linux-gnu/lib",
 						"/usr/lib"
 					],
 					"linkFrameworkDirectories" : [],
@@ -77,8 +83,8 @@
 						"gcc"
 					]
 				},
-				"path" : "/usr/bin/clang++",
-				"version" : "14.0.6"
+				"path" : "/usr/bin/g++",
+				"version" : "12.1.0"
 			},
 			"language" : "CXX",
 			"sourceFileExtensions" : 

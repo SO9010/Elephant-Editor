@@ -96,12 +96,12 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-lSDL2_image",
+				"fragment" : "-lSDL2_mixer",
 				"role" : "flags"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-lSDL2_mixer",
+				"fragment" : "-lSDL2_image",
 				"role" : "flags"
 			},
 			{

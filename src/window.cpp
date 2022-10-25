@@ -158,44 +158,6 @@ void window::handleWindowEvent(boardPorperties &bP, tools &toolCollection){
                         }
                     }
                 }
-                if(toolCollection.penTool){
-                    if(wP.state[SDL_SCANCODE_LCTRL] && wP.state[SDL_SCANCODE_1]){
-                        toolCollection.clickColour.r = 255;
-                        toolCollection.clickColour.g = 255;
-                        toolCollection.clickColour.b = 255;
-                        toolCollection.clickColour.a = 255;
-                    }
-                    if(wP.state[SDL_SCANCODE_LCTRL] && wP.state[SDL_SCANCODE_2]){
-                        toolCollection.clickColour.r = 0;
-                        toolCollection.clickColour.g = 0;
-                        toolCollection.clickColour.b = 0;
-                        toolCollection.clickColour.a = 255;                    
-                    }
-                    if(wP.state[SDL_SCANCODE_LCTRL] && wP.state[SDL_SCANCODE_3]){
-                        toolCollection.clickColour.r = 255;
-                        toolCollection.clickColour.g = 0;
-                        toolCollection.clickColour.b = 0;
-                        toolCollection.clickColour.a = 255;
-                    }
-                    if(wP.state[SDL_SCANCODE_LCTRL] && wP.state[SDL_SCANCODE_4]){
-                        toolCollection.clickColour.r = 0;
-                        toolCollection.clickColour.g = 255;
-                        toolCollection.clickColour.b = 0;
-                        toolCollection.clickColour.a = 255;
-                    }
-                    if(wP.state[SDL_SCANCODE_LCTRL] && wP.state[SDL_SCANCODE_5]){
-                        toolCollection.clickColour.r = 255;
-                        toolCollection.clickColour.g = 0;
-                        toolCollection.clickColour.b = 0;
-                        toolCollection.clickColour.a = 255;
-                    }
-                    if(wP.state[SDL_SCANCODE_LCTRL] && wP.state[SDL_SCANCODE_6]){
-                        toolCollection.clickColour.r = 0;
-                        toolCollection.clickColour.g = 255;
-                        toolCollection.clickColour.b = 0;
-                        toolCollection.clickColour.a = 255;
-                    }
-                }
             break;
 
             case SDL_MOUSEWHEEL:

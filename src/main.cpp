@@ -21,7 +21,8 @@ int main(){
         wind->handleWindowEvent(grid.bP, toolBar.toolCollection); 
         grid.resizeCanvas(originalBoardX, originalBoardY);
         grid.drawGrid(wind->wP);
-        colourPicker.renderColourPicker();
+        colourPicker.renderColourPicker(toolBar.toolCollection);
+        colourPicker.moveColourSelectLine(wind->wP);
         toolBar.renderToolBar(wind->wP, grid.bP);
     }
     return 0;

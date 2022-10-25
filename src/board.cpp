@@ -40,30 +40,30 @@ void board::resizeCanvas(int &originalBoardX, int &originalBoardY){
 }
 
 void board::universalResizeCanvas(int resize){
-        std::vector<std::vector<SDL_Color>> tmpCanvas {bP.drawArea};
-        SDL_Color tmp = {255,255,255,0};
-        bP.drawArea.clear();
-        bP.drawArea.resize(bP.board.x-2, std::vector<SDL_Color>(bP.board.y-2, tmp));
-        for(int i = 0; i < bP.drawArea.size() && i < tmpCanvas.size(); i++){
-            for(int j = 0; j < bP.drawArea[i].size() && j < tmpCanvas[i].size(); j++){
-                if(resize > 0){
-                    bP.drawArea[i+1][j+1].r = tmpCanvas[i][j].r;    
-                    bP.drawArea[i+1][j+1].g = tmpCanvas[i][j].g;    
-                    bP.drawArea[i+1][j+1].b = tmpCanvas[i][j].b;    
-                    bP.drawArea[i+1][j+1].a = tmpCanvas[i][j].a;    
-                }
-                else if(resize < 1){
-                    //TODO fix bug where right and bottom get cut off to early
-                    if(i-1>=0 && j-1>=0){
-                        bP.drawArea[i-1][j-1].r = tmpCanvas[i][j].r;    
-                        bP.drawArea[i-1][j-1].g = tmpCanvas[i][j].g;    
-                        bP.drawArea[i-1][j-1].b = tmpCanvas[i][j].b;    
-                        bP.drawArea[i-1][j-1].a = tmpCanvas[i][j].a;      
-                    }
+    std::vector<std::vector<SDL_Color>> tmpCanvas {bP.drawArea};
+    SDL_Color tmp = {255,255,255,0};
+    bP.drawArea.clear();
+    bP.drawArea.resize(bP.board.x-2, std::vector<SDL_Color>(bP.board.y-2, tmp));
+    for(int i = 0; i < bP.drawArea.size() && i < tmpCanvas.size(); i++){
+        for(int j = 0; j < bP.drawArea[i].size() && j < tmpCanvas[i].size(); j++){
+            if(resize > 0){
+                bP.drawArea[i+1][j+1].r = tmpCanvas[i][j].r;    
+                bP.drawArea[i+1][j+1].g = tmpCanvas[i][j].g;    
+                bP.drawArea[i+1][j+1].b = tmpCanvas[i][j].b;    
+                bP.drawArea[i+1][j+1].a = tmpCanvas[i][j].a;    
+            }
+            else if(resize < 1){
+                //TODO fix bug where right and bottom get cut off to early
+                if(i-1>=0 && j-1>=0){
+                    bP.drawArea[i-1][j-1].r = tmpCanvas[i][j].r;    
+                    bP.drawArea[i-1][j-1].g = tmpCanvas[i][j].g;    
+                    bP.drawArea[i-1][j-1].b = tmpCanvas[i][j].b;    
+                    bP.drawArea[i-1][j-1].a = tmpCanvas[i][j].a;      
                 }
             }
         }
-        tmpCanvas.clear();    
+    }
+    tmpCanvas.clear();    
 }
 
 void board::renderCanvas(){
