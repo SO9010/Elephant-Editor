@@ -33,5 +33,10 @@
   "directory": "/home/samio/Elephant-Editor/build",
   "command": "/usr/bin/g++ -I/src -I/includes -g -o CMakeFiles/Elephant-Editor.dir/src/widgets/colourPicker.cpp.o -c /home/samio/Elephant-Editor/src/widgets/colourPicker.cpp",
   "file": "/home/samio/Elephant-Editor/src/widgets/colourPicker.cpp"
+},
+{
+  "directory": "/home/samio/Elephant-Editor/build",
+  "command": "/usr/bin/g++ -I/src -I/includes -g -o CMakeFiles/Elephant-Editor.dir/src/ui/text.cpp.o -c /home/samio/Elephant-Editor/src/ui/text.cpp",
+  "file": "/home/samio/Elephant-Editor/src/ui/text.cpp"
 }
 ]

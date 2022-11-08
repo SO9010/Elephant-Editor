@@ -7,7 +7,6 @@ board::~board(){
 
 }
 
-
 void board::resizeCanvas(int &originalBoardX, int &originalBoardY){
     if(originalBoardX != bP.board.x -2 || originalBoardY != bP.board.y -2){
         std::vector<std::vector<SDL_Color>> tmpCanvas {bP.drawArea};
@@ -86,8 +85,6 @@ void board::renderCanvas(){
         cellsizeTotalX = 0;
     }
 }
-
-
 
 void board::drawGrid(windowProperty wP){
     bP.gridX = (wP.cWo - ((bP.board.x + 2)*bP.cellSize)/2);

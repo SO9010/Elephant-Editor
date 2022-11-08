@@ -8,9 +8,14 @@ public:
     void moveColourSelectLine(windowProperty wP);
     void moveHueSelectLine(windowProperty wP);
     void changePrimaryColour(SDL_Color &originalColour, SDL_Color &changeToColour);
-    int w = 230, h = 100;
     SDL_Color hue;
 private:
-    int pick = 150;
-    int x = 8, y = 8;
+    text rgbText;
+    text hueText;
+    int pickX = 0;
+    int pickY = 0;
+    int huePicker = 0;
+    int w = 300, h = 255;
+    int x = 0, y = 0; 
+    SDL_Color pixel = {0, 0, 0};
 };

@@ -1,3 +1,0 @@
-/home/samio/Elephant-Editor/cmake-build-debug/CMakeFiles/Elephant-Editor.dir
-/home/samio/Elephant-Editor/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/samio/Elephant-Editor/cmake-build-debug/CMakeFiles/rebuild_cache.dir

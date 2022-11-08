@@ -8,10 +8,12 @@ SDL_Renderer* window::rend = nullptr;
 window::window(){
     SDL_Init(SDL_INIT_EVERYTHING);
     IMG_Init(IMG_INIT_PNG);
+    TTF_Init();
     wP.running = true; 
 }
 
 window::~window(){
+    TTF_Quit();
     IMG_Quit();
     SDL_Quit();
     if(wP.running){

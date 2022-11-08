@@ -98,6 +98,13 @@ build CMakeFiles/Elephant-Editor.dir/src/widgets/colourPicker.cpp.o: CXX_COMPILE
   OBJECT_DIR = CMakeFiles/Elephant-Editor.dir
   OBJECT_FILE_DIR = CMakeFiles/Elephant-Editor.dir/src/widgets
 
+build CMakeFiles/Elephant-Editor.dir/src/ui/text.cpp.o: CXX_COMPILER__Elephant-Editor_Debug /home/samio/Elephant-Editor/src/ui/text.cpp || cmake_object_order_depends_target_Elephant-Editor
+  DEP_FILE = CMakeFiles/Elephant-Editor.dir/src/ui/text.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/src -I/includes
+  OBJECT_DIR = CMakeFiles/Elephant-Editor.dir
+  OBJECT_FILE_DIR = CMakeFiles/Elephant-Editor.dir/src/ui
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Elephant-Editor
@@ -106,7 +113,7 @@ build CMakeFiles/Elephant-Editor.dir/src/widgets/colourPicker.cpp.o: CXX_COMPILE
 #############################################
 # Link the executable Elephant-Editor
 
-build Elephant-Editor: CXX_EXECUTABLE_LINKER__Elephant-Editor_Debug CMakeFiles/Elephant-Editor.dir/src/board.cpp.o CMakeFiles/Elephant-Editor.dir/src/main.cpp.o CMakeFiles/Elephant-Editor.dir/src/window.cpp.o CMakeFiles/Elephant-Editor.dir/src/ui/button.cpp.o CMakeFiles/Elephant-Editor.dir/src/ui/container.cpp.o CMakeFiles/Elephant-Editor.dir/src/widgets/toolBar.cpp.o CMakeFiles/Elephant-Editor.dir/src/widgets/colourPicker.cpp.o
+build Elephant-Editor: CXX_EXECUTABLE_LINKER__Elephant-Editor_Debug CMakeFiles/Elephant-Editor.dir/src/board.cpp.o CMakeFiles/Elephant-Editor.dir/src/main.cpp.o CMakeFiles/Elephant-Editor.dir/src/window.cpp.o CMakeFiles/Elephant-Editor.dir/src/ui/button.cpp.o CMakeFiles/Elephant-Editor.dir/src/ui/container.cpp.o CMakeFiles/Elephant-Editor.dir/src/widgets/toolBar.cpp.o CMakeFiles/Elephant-Editor.dir/src/widgets/colourPicker.cpp.o CMakeFiles/Elephant-Editor.dir/src/ui/text.cpp.o
   FLAGS = -g
   LINK_FLAGS = -lSDL2 -lSDL2_mixer -lSDL2_image -lSDL2_ttf -lstdc++
   OBJECT_DIR = CMakeFiles/Elephant-Editor.dir
@@ -159,14 +166,14 @@ build all: phony Elephant-Editor
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/samio/Elephant-Editor/CMakeLists.txt /usr/share/cmake-3.24/Modules/CMakeCInformation.cmake /usr/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.24/Modules/Compiler/GNU.cmake /usr/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.24/Modules/Platform/Linux.cmake /usr/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.1/CMakeCCompiler.cmake CMakeFiles/3.24.1/CMakeCXXCompiler.cmake CMakeFiles/3.24.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/samio/Elephant-Editor/CMakeLists.txt /usr/share/cmake-3.24/Modules/CMakeCInformation.cmake /usr/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.24/Modules/Compiler/GNU.cmake /usr/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.24/Modules/Platform/Linux.cmake /usr/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/samio/Elephant-Editor/CMakeLists.txt /usr/share/cmake-3.24/Modules/CMakeCInformation.cmake /usr/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.24/Modules/Compiler/GNU.cmake /usr/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.24/Modules/Platform/Linux.cmake /usr/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.1/CMakeCCompiler.cmake CMakeFiles/3.24.1/CMakeCXXCompiler.cmake CMakeFiles/3.24.1/CMakeSystem.cmake: phony
+build /home/samio/Elephant-Editor/CMakeLists.txt /usr/share/cmake-3.24/Modules/CMakeCInformation.cmake /usr/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.24/Modules/Compiler/GNU.cmake /usr/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.24/Modules/Platform/Linux.cmake /usr/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
 
 
 #############################################

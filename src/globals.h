@@ -2,8 +2,9 @@
 
 #include "/usr/include/SDL2/SDL.h"
 #include "/usr/include/SDL2/SDL_image.h"
+#include "/usr/include/SDL2/SDL_ttf.h"
 #include <vector>
-#include <string.h>
+#include <string>
 #include <memory>
 
 struct tools{

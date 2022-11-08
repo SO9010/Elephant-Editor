@@ -23,6 +23,7 @@ int main(){
         grid.drawGrid(wind->wP);
         colourPicker.renderColourPicker(toolBar.toolCollection);
         colourPicker.moveColourSelectLine(wind->wP);
+        colourPicker.moveHueSelectLine(wind->wP);
         toolBar.renderToolBar(wind->wP, grid.bP);
     }
     return 0;
