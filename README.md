@@ -5,7 +5,7 @@ This is a 2d pixel art editor/creator created using the SDL2 library.
 ---
 
 **Rough design plan:**
-![Screenshot](/screenShot.png)
+![Screenshot](/future/screenShot.png)
 
 ---
 #### Roadmap
