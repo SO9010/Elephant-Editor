@@ -1,13 +1,17 @@
 #include "window.h"
 #include "board.h"
-#include "toolBar.h"
+#include "widgets/toolBar.h"
+#include "widgets/colourPicker.h"
+#include <thread>
+
+void sad(){
+    std::cout << "bo" << std::endl;
+}
 
 window *wind = NULL;
-
 int main(){
     wind = new window();
     wind->init();
-
     board grid;
     int originalBoardX = 4;
     int originalBoardY = 4;
@@ -15,11 +19,15 @@ int main(){
     grid.bP.board.y = 8;
     grid.bP.cellSize = 64;
 
+    toolBar toolBar;
+    colourPicker colourPicker;
 
     while(wind->wP.running){
-        wind->handleWindowEvent(grid.bP); 
+        wind->handleWindowEvent(grid.bP, toolBar.toolCollection); 
         grid.resizeCanvas(originalBoardX, originalBoardY);
         grid.drawGrid(wind->wP);
+        colourPicker.renderColourPicker(toolBar.toolCollection, wind->wP);
+        toolBar.renderToolBar(wind->wP, grid.bP);
     }
     return 0;
 }

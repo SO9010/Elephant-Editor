@@ -7,9 +7,10 @@ public:
     board();
     ~board();
     boardPorperties     bP;
+    void                universalResizeCanvas(int resize);
     void                resizeCanvas(int &originalBoardX, int &originalBoardY);
     void                drawGrid(windowProperty wP);
-    void                drawGhostCursor(windowProperty wP);
+    void                drawGhostPen(windowProperty wP);
 private:
     void                renderCanvas();
 };

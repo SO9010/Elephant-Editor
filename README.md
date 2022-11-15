@@ -3,8 +3,9 @@
 This is a 2d pixel art editor/creator created using the SDL2 library.
 
 ---
+
 **Rough design plan:**
-![Screenshot](/future/design_1.png)
+![Screenshot](/future/screenShot.png)
 
 ---
 #### Roadmap
@@ -17,14 +18,12 @@ This is a 2d pixel art editor/creator created using the SDL2 library.
 
 #### Compiling details
 
-DEPENDENCIES:
-##### Arch 
-    sudo pacman -S sdl2 sdl2_image sdl2_ttf
-Compiling:
-    Vscode only working to compile at the moment
+    Currently I'm using the cmake plugin in VScode
+
 #### Current ways to work
 
-* Press "ctrl p" to add more cells evenly to every side
-* Press "ctrl m" to remove cells evenly to every side untill only 1 or 4 is left 
+* Press "=" to add more cells evenly to every side
+* Press "-" to remove cells evenly to every side untill only 1 or 4 is left 
 * Press down the scroll button to move the canvas
 * Scroll to zoom in/out
+* There are also buttons to control movement

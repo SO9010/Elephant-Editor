@@ -7,16 +7,6 @@ board::~board(){
 
 }
 
-void board::drawGhostCursor(windowProperty wP){
-        SDL_Rect            ghostCursor = {0, 0, bP.cellSize,
-                                             bP.cellSize}; 
-        ghostCursor.x = ((wP.cursorX / bP.cellSize) * bP.cellSize);
-        ghostCursor.y = ((wP.cursorY / bP.cellSize) * bP.cellSize);
-        SDL_SetRenderDrawColor(window::rend, 33, 33, 33, 255);
-        SDL_RenderFillRect(window::rend, &ghostCursor);
-}
-
-
 void board::resizeCanvas(int &originalBoardX, int &originalBoardY){
     if(originalBoardX != bP.board.x -2 || originalBoardY != bP.board.y -2){
         std::vector<std::vector<SDL_Color>> tmpCanvas {bP.drawArea};
@@ -48,6 +38,33 @@ void board::resizeCanvas(int &originalBoardX, int &originalBoardY){
     }
 }
 
+void board::universalResizeCanvas(int resize){
+    std::vector<std::vector<SDL_Color>> tmpCanvas {bP.drawArea};
+    SDL_Color tmp = {255,255,255,0};
+    bP.drawArea.clear();
+    bP.drawArea.resize(bP.board.x-2, std::vector<SDL_Color>(bP.board.y-2, tmp));
+    for(int i = 0; i < bP.drawArea.size() && i < tmpCanvas.size(); i++){
+        for(int j = 0; j < bP.drawArea[i].size() && j < tmpCanvas[i].size(); j++){
+            if(resize > 0){
+                bP.drawArea[i+1][j+1].r = tmpCanvas[i][j].r;    
+                bP.drawArea[i+1][j+1].g = tmpCanvas[i][j].g;    
+                bP.drawArea[i+1][j+1].b = tmpCanvas[i][j].b;    
+                bP.drawArea[i+1][j+1].a = tmpCanvas[i][j].a;    
+            }
+            else if(resize < 1){
+                //TODO fix bug where right and bottom get cut off to early
+                if(i-1>=0 && j-1>=0){
+                    bP.drawArea[i-1][j-1].r = tmpCanvas[i][j].r;    
+                    bP.drawArea[i-1][j-1].g = tmpCanvas[i][j].g;    
+                    bP.drawArea[i-1][j-1].b = tmpCanvas[i][j].b;    
+                    bP.drawArea[i-1][j-1].a = tmpCanvas[i][j].a;      
+                }
+            }
+        }
+    }
+    tmpCanvas.clear();    
+}
+
 void board::renderCanvas(){
     SDL_Rect pixel {0, 0, bP.cellSize, bP.cellSize};
     int cellsizeTotalX = 0;
@@ -69,11 +86,10 @@ void board::renderCanvas(){
     }
 }
 
-
-
 void board::drawGrid(windowProperty wP){
     bP.gridX = (wP.cWo - ((bP.board.x + 2)*bP.cellSize)/2);
     bP.gridY = (wP.cHo - ((bP.board.y + 2)*bP.cellSize)/2);
+    this->renderCanvas();
     for(int i = 0, j = 0; i < 1+(bP.board.x + 2)*bP.cellSize || j < 1+(bP.board.y + 2)*bP.cellSize; i+=bP.cellSize, j+=bP.cellSize){
         SDL_SetRenderDrawColor(window::rend, 125, 125, 200, 1*(bP.cellSize/2.05));
         //Draw grid
@@ -95,5 +111,4 @@ void board::drawGrid(windowProperty wP){
             bP.board.windowY = j+bP.gridY;
         }
     }
-    this->renderCanvas();
 }
