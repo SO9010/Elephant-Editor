@@ -52,7 +52,6 @@ void toolBar::renderToolBar(windowProperty wP, boardPorperties bP){
     container.y = wP.cH-(toolCollection.toolBarHeight/2);
     container.addToContainer(48, 34 * 7 + 8 * 7 - 2);
     container.renderContainer();
-    
     button moveButton;
     moveButton.buttonHeight = 34;
     moveButton.buttonWidth = 34;

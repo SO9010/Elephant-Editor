@@ -2,6 +2,11 @@
 #include "board.h"
 #include "widgets/toolBar.h"
 #include "widgets/colourPicker.h"
+#include <thread>
+
+void sad(){
+    std::cout << "bo" << std::endl;
+}
 
 window *wind = NULL;
 int main(){
@@ -21,9 +26,7 @@ int main(){
         wind->handleWindowEvent(grid.bP, toolBar.toolCollection); 
         grid.resizeCanvas(originalBoardX, originalBoardY);
         grid.drawGrid(wind->wP);
-        colourPicker.renderColourPicker(toolBar.toolCollection);
-        colourPicker.moveColourSelectLine(wind->wP);
-        colourPicker.moveHueSelectLine(wind->wP);
+        colourPicker.renderColourPicker(toolBar.toolCollection, wind->wP);
         toolBar.renderToolBar(wind->wP, grid.bP);
     }
     return 0;
